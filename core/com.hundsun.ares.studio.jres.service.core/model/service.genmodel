@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="源程序名称：${file_name}&#xD;&#xA;软件著作权：恒生电子股份有限公司 版权所有&#xD;&#xA;系统名称：JRES Studio&#xD;&#xA;模块名称：${project_name}&#xD;&#xA;功能说明：$$desc&#xD;&#xA;相关文档：&#xD;&#xA;作者：${user}"
+    modelDirectory="/com.hundsun.ares.studio.jres.service.core/src" editDirectory="/com.hundsun.ares.studio.jres.service.ui/src"
+    modelPluginID="com.hundsun.ares.studio.jres.service.core" modelName="Service"
+    editPluginClass="com.hundsun.ares.studio.jres.service.ui.ServiceUI" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    editPluginID="com.hundsun.ares.studio.jres.service.ui" runtimeVersion="2.6" language=""
+    usedGenPackages="../../com.hundsun.ares.studio.core/model/ares.genmodel#//model ../../com.hundsun.ares.studio.biz.core/model/biz.genmodel#//biz">
+  <foreignModel>service.ecore</foreignModel>
+  <genPackages prefix="Service" basePackage="com.hundsun.ares.studio.jres" disposableProviderFactory="true"
+      ecorePackage="service.ecore#/">
+    <genClasses ecoreClass="service.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference service.ecore#//Service/interface"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

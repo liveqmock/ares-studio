@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/procedure/1.0.0"
+            class="procdure.ProcdurePackage"
+            genModel="model/procedure.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated procedure -->
+      <package
+            uri="http://www.hundsun.com/ares/studio/procedure/1.0.0"
+            class="com.hundsun.ares.studio.procdure.ProcdurePackage"
+            genModel="model/procedure.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.procdure.constants.IProcedureRefType"
+            resType="com.hundsun.ares.studio.procdure.constants.IProcedureResType">
+      </mapping>
+   </extension>
+   
+    <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.procdure.Procedure"
+            class="com.hundsun.ares.studio.procdure.ProcedureAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.core.model.IReferenceProvider2">
+         </adapter>
+      </factory>
+   </extension>
+
+</plugin>

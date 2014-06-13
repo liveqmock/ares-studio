@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.usermacro.core/src" editDirectory="/com.hundsun.ares.studio.usermacro.ui/src"
+    modelPluginID="com.hundsun.ares.studio.usermacro" modelName="UserMacro" editPluginClass="com.hundsun.ares.studio.usermacro.provider.UserMacroUI"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    publicConstructors="true" editPluginID="com.hundsun.ares.studio.usermacro.ui"
+    runtimeVersion="2.6" usedGenPackages="../../com.hundsun.ares.studio.core/model/ares.genmodel#//model">
+  <foreignModel>UserMacro.ecore</foreignModel>
+  <genPackages prefix="UserMacro" basePackage="com.hundsun.ares.studio" disposableProviderFactory="true"
+      ecorePackage="UserMacro.ecore#/">
+    <genClasses ecoreClass="UserMacro.ecore#//UserMacro">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UserMacro.ecore#//UserMacro/macroItems"/>
+    </genClasses>
+    <genClasses ecoreClass="UserMacro.ecore#//UserMacroItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserMacro.ecore#//UserMacroItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserMacro.ecore#//UserMacroItem/sequence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserMacro.ecore#//UserMacroItem/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserMacro.ecore#//UserMacroItem/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UserMacro.ecore#//UserMacroItem/description"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

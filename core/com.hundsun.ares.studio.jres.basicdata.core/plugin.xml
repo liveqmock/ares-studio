@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension-point id="EpachageFactory" name="EpachageFactory" schema="schema/EpachageFactory.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/jres/basicdata/1.0.0"
+            class="com.hundsun.ares.studio.jres.basicdata.core.basicdata.BasicdataPackage"
+            genModel="model/basicdata.genmodel"/>
+   </extension>
+   
+   <!-- 转移到UI插件中去了 -->
+   <!--extension
+         point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            class="com.hundsun.ares.studio.jres.basicdata.core.basicdata.provider.BasicdataItemProviderAdapterFactory"
+            supportedTypes=" "
+            uri="http://www.hundsun.com/ares/studio/jres/basicdata/1.0.0">
+      </factory>
+   </extension-->
+
+</plugin>

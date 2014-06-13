@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension-point id="genmodulecode" name="Cres GenModuleCode" schema="schema/com.hundsun.ares.studio.cres.uigenmodulecode.exsd"/>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.hundsun.com/ares/studio/cres/extend/1.0.0"
+            class="com.hundsun.ares.studio.cres.extend.cresextend.provider.CresextendItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.ui.editor.ares_page">
+      <pageItem
+            class="com.hundsun.ares.studio.cres.extend.ui.project.CresProjectPropertyPage"
+            editor_id="com.hundsun.ares.studio.ui.editor.projecteditor"
+            name="CRES工程属性"
+            order="100"
+            pageid="com.hundsun.ares.studio.cres.extend.ui.project.projectproperty">
+      </pageItem>
+   </extension>
+	<extension
+         point="com.hundsun.ares.studio.core.ares_extend_model_serializer">
+      <serializer
+            class="com.hundsun.ares.studio.jres.modelconvert.EMFExtendModelConverter"
+            key="CresProjectExtendProperty"
+            targetClassName="com.hundsun.ares.studio.internal.core.ARESProjectProperty">
+      </serializer>
+   </extension>
+ <extension
+       point="org.eclipse.ui.navigator.navigatorContent">
+    <commonWizard
+          type="new"
+          wizardId="com.hundsun.ares.studio.ui.modulewizard">
+       <enablement>
+          <or>
+             <and>
+                <instanceof
+                      value="com.hundsun.ares.studio.core.IARESModuleRoot">
+                </instanceof>
+                <not>
+                   <test
+                         forcePluginActivation="true"
+                         property="com.hundsun.ares.studio.core.maxModuleLevel"
+                         value="0">
+                   </test>
+                </not>
+             </and>
+             <instanceof
+                   value="com.hundsun.ares.studio.core.IARESModule">
+             </instanceof>
+          </or>
+       </enablement>
+    </commonWizard>
+ </extension>
+ 
+ <extension
+         point="org.eclipse.ui.contexts">
+      <context
+            description="CRES文本编辑器上下文"
+            id="com.hundsun.ares.studio.ui.cres.context.source"
+            name="CRES文本"
+            parentId="org.eclipse.ui.textEditorScope">
+      </context>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.hundsun.ares.studio.ui.editor.command.comment"
+            contextId="com.hundsun.ares.studio.ui.cres.context.source"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+/">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="com.hundsun.ares.studio.cres.ui.gencresmodulecode"
+            objectClass="com.hundsun.ares.studio.core.IARESElement">
+                   <menu
+             icon="icons/module_pro.gif"
+             id="com.hundsun.ares.studio.cres.ui.menu.genmodule"
+             label="代码生成">
+          <separator
+                name="genmodule">
+          </separator>
+       </menu>
+         <action
+               class="com.hundsun.ares.studio.cres.extend.ui.module.gencode.GenModuleCodehAction"
+               id="com.hundsun.ares.studio.cres.ui.action.genmodulecode"
+               label="模块代码生成"
+               menubarPath="com.hundsun.ares.studio.cres.ui.menu.genmodule/genmodule"
+               state="true"
+               style="push">
+         </action>
+         <enablement>
+            <or>
+               <objectClass
+                     name="com.hundsun.ares.studio.core.IARESResource">
+               </objectClass>
+               <objectClass
+                     name="com.hundsun.ares.studio.core.IARESModule">
+               </objectClass>
+            </or>
+         </enablement>
+      </objectContribution>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.jres.script.scriptpoxyfactory">
+      <PoxyFactory
+            class="com.hundsun.ares.studio.cres.script.impl.GenCodeScriptPoxyFactory"
+            id="cres.gencode">
+      </PoxyFactory>
+   </extension>
+	
+</plugin>

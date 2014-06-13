@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="atom" nsURI="http://www.hundsun.com/ares/studio/cres/atom/1.0.0"
+    nsPrefix="atom">
+  <eClassifiers xsi:type="ecore:EClass" name="AtomFunction" eSuperTypes="../../com.hundsun.ares.studio.biz.core/model/biz.ecore#//BizInterface ../../com.hundsun.ares.studio.core/model/ares.ecore#//JRESResourceInfo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="objectId"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="database" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudoCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalVariables" upperBound="-1"
+        eType="#//InternalParam" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtomService" eSuperTypes="#//AtomFunction">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="objectId"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalParam" eSuperTypes="../../com.hundsun.ares.studio.biz.core/model/biz.ecore#//Parameter">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="id type"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

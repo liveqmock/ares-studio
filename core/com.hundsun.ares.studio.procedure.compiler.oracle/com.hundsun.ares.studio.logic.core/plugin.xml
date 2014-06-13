@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/cres/logic/1.0.0"
+            class="com.hundsun.ares.studio.logic.LogicPackage"
+            genModel="model/logic.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.jres.script.scriptpoxyfactory">
+      <PoxyFactory
+            class="com.hundsun.ares.studio.logic.script.LogicScriptProxyFactory"
+            id="cres.logic">
+      </PoxyFactory>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.logic.constants.ILogicRefType"
+            resType="com.hundsun.ares.studio.logic.constants.ILogicResType">
+      </mapping>
+   </extension>
+
+</plugin>

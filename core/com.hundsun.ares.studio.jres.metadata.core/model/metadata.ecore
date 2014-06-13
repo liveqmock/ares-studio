@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metadata" nsURI="http://www.hundsun.com/ares/studio/jres/metadata/1.0.0"
+    nsPrefix="metadata">
+  <eClassifiers xsi:type="ecore:EClass" name="MDModuleCommonProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useRefFeature" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="functionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uixml" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autobuild" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetadataResourceData" abstract="true"
+      eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//JRESResourceInfo">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//MetadataItem"/>
+    </eTypeParameters>
+    <eOperations name="find">
+      <eGenericType eTypeParameter="#//MetadataResourceData/T"/>
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//Operation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="#//MetadataCategory"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        containment="true" eOpposite="#//MetadataItem/parent">
+      <eGenericType eTypeParameter="#//MetadataResourceData/T"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//ExtensibleModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chineseName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetadataItem" eSuperTypes="#//NamedElement">
+    <eOperations name="getCategories" upperBound="-1" eType="#//MetadataCategory">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return MetadataUtil.getCategories(this);"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eOpposite="#//MetadataResourceData/items">
+      <eGenericType eClassifier="#//MetadataResourceData">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetadataCategory" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//MetadataCategory" containment="true" eOpposite="#//MetadataCategory/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//MetadataItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//MetadataCategory"
+        eOpposite="#//MetadataCategory/children"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeDefaultValueList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//TypeDefaultValue"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeDefaultValue" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.hundsun.com/ares/studio/jres/references" references="#//TypeDefaultValue">
+      <details key="refId" value="com.hundsun.ares.studio.jres.model.metadata.util.MetadataReferenceParser jres.md.typedef"/>
+    </eAnnotations>
+    <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="setValue">
+      <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardDataTypeList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//StandardDataType"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardDataType" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId"/>
+    </eAnnotations>
+    <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="setValue">
+      <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessDataTypeList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//BusinessDataType"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessDataType" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId stdType length precision defaultValue"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stdType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardFieldList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//StandardField"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardField" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId length precision dataType dictionaryType"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dictionaryType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DictionaryList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//DictionaryType"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DictionaryType" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//DictionaryItem" containment="true" eOpposite="#//DictionaryItem/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DictionaryItem" eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//ExtensibleModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="value name constantName"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//DictionaryType"
+        eOpposite="#//DictionaryType/items"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chineseName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstantList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//ConstantItem"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstantItem" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId dataType value length precision"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorNoList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//ErrorNoItem"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ErrorNoItem" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refId constantName message no level"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="no" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneralDataConfigList" eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//JRESResourceInfo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//GeneralDataConfigItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneralDataConfigItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="chineseName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="discription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MenuItem" eSuperTypes="#//MetadataItem">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name refID"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="icon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subItems" upperBound="-1"
+        eType="#//MenuItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionProxys" upperBound="-1"
+        eType="#//FunctionProxy" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionProxy" eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//ExtensibleModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="funCode"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="name subTransCode"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subTransCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="servID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MenuList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//Function" containment="true"/>
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//MenuItem"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IDRangeItem" eSuperTypes="#//MetadataItem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IDRangeList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//IDRangeItem"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IDRange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="range" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="0-0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BizPropertyConfigList">
+    <eGenericSuperTypes eClassifier="#//MetadataResourceData">
+      <eTypeArguments eClassifier="#//BizPropertyConfig"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BizPropertyConfig" eSuperTypes="#//MetadataItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eSubpackages name="decrypt" nsURI="http://www.hundsun.com/ares/studio/jres/metadata/decrypt/1.0.0"
+      nsPrefix="decrypt">
+    <eClassifiers xsi:type="ecore:EDataType" name="IARESResource" instanceClassName="com.hundsun.ares.studio.core.IARESResource"
+        serializable="false"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Pair" instanceClassName="com.hundsun.ares.studio.jres.model.core.util.Pair">
+      <eTypeParameters name="F"/>
+      <eTypeParameters name="S"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ITypeDefaultValue" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.ITypeDefaultValue"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IStandardDataType" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IStandardDataType"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IBusinessDataType" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IBusinessDataType"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IStandardField" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IStandardField"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IDictionaryType" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IDictionaryType"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IDictionaryItem" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IDictionaryItem"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IErrorNoItem" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IErrorNoItem"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IUserConstantItem" instanceClassName="com.hundsun.ares.studio.jres.metadata.service.IUserConstantItem"
+        abstract="true" interface="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DeMetadataItem">
+      <eTypeParameters name="T">
+        <eBounds eClassifier="#//MetadataItem"/>
+      </eTypeParameters>
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getProxyItem().getName();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getChineseName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getProxyItem().getChineseName();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getProxyItem().getDescription();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getDataMapValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getData().get(key);"/>
+        </eAnnotations>
+        <eParameters name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getData2MapValue" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return null;&#xD;&#xA;return getResolvedItem().first.getData2().get(key);"/>
+        </eAnnotations>
+        <eParameters name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getResolvedItem">
+        <eGenericType eClassifier="#//decrypt/Pair">
+          <eTypeArguments eTypeParameter="#//decrypt/DeMetadataItem/T"/>
+          <eTypeArguments eClassifier="#//decrypt/IARESResource"/>
+        </eGenericType>
+      </eOperations>
+      <eOperations name="getProxyItem">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return proxyItem;"/>
+        </eAnnotations>
+        <eGenericType eTypeParameter="#//decrypt/DeMetadataItem/T"/>
+      </eOperations>
+      <eOperations name="getResource" eType="#//decrypt/IARESResource">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return resource;"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getDataMap" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStringToStringMapEntry">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return ECollections.emptyEMap();&#xD;&#xA;return getResolvedItem().first.getData();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getData2Map" upperBound="-1" eType="ecore:EClass ../../com.hundsun.ares.studio.core/model/ares.ecore#//EStringToEObjectMapEntry">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return ECollections.emptyEMap();&#xD;&#xA;return getResolvedItem().first.getData2();"/>
+        </eAnnotations>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeTypeDefaultValue">
+      <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return getDataMapValue(typeId);"/>
+        </eAnnotations>
+        <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//TypeDefaultValue"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/ITypeDefaultValue"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeStandardDataType">
+      <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return getDataMapValue(typeId);"/>
+        </eAnnotations>
+        <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getRealType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return StringUtils.replaceEach(getValue(typeId), &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;new String[]{&quot;$L&quot;, &quot;$P&quot;}, &#xD;&#xA;&#x9;&#x9;&#x9;&#x9;new String[]{length, precision});"/>
+        </eAnnotations>
+        <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="precision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//StandardDataType"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/IStandardDataType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeBusinessDataType">
+      <eOperations name="getDefaultValue" eType="#//decrypt/DeTypeDefaultValue"/>
+      <eOperations name="getDefaultValueId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getDefaultValue();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getLength();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getPrecision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getPrecision();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getStdType" eType="#//decrypt/DeStandardDataType"/>
+      <eOperations name="getStdTypeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getStdType();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getRealDefaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return getDefaultValue().getValue(typeId);"/>
+        </eAnnotations>
+        <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getRealType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return getStdType().getRealType(typeId, getLength(), getPrecision());"/>
+        </eAnnotations>
+        <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//BusinessDataType"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/IBusinessDataType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeStandardField">
+      <eOperations name="getDataType" eType="#//decrypt/DeBusinessDataType"/>
+      <eOperations name="getDataTypeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getDataType();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getDictionaryType" eType="#//decrypt/DeDictionaryType"/>
+      <eOperations name="getDictionaryTypeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getDictionaryType();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getLength();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getPrecision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getPrecision();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getRealType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return getDataType().getStdType().getRealType(typeId, getLength(), getPrecision());"/>
+        </eAnnotations>
+        <eParameters name="typeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//StandardField"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/IStandardField"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeDictionaryType">
+      <eOperations name="getItems" upperBound="-1" eType="#//decrypt/DeDictionaryItem"/>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//DictionaryType"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/IDictionaryType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeDictionaryItem" eSuperTypes="#//decrypt/IDictionaryItem">
+      <eOperations name="getParent" eType="#//decrypt/DeDictionaryType"/>
+      <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="getChineseName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="getConstantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="getDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeConstantItem">
+      <eOperations name="getDataType" eType="#//decrypt/DeStandardDataType"/>
+      <eOperations name="getDataTypeId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return StringUtils.EMPTY;&#xD;&#xA;return getResolvedItem().first.getDataType();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getLength();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getPrecision" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getPrecision();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getValue();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//ConstantItem"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/IUserConstantItem"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DeErrorNoItem">
+      <eOperations name="getConstantName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getConstantName();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getLevel();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getMessage();"/>
+        </eAnnotations>
+      </eOperations>
+      <eOperations name="getNo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="if (!checkStatus()) return &quot;&quot;;&#xD;&#xA;return getResolvedItem().first.getNo();"/>
+        </eAnnotations>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="#//decrypt/DeMetadataItem">
+        <eTypeArguments eClassifier="#//ErrorNoItem"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="#//decrypt/IErrorNoItem"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

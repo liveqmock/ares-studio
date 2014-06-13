@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.jres.basicdata.core/src"
+    editDirectory="/com.hundsun.ares.studio.jres.basicdata.ui/src" modelPluginID="com.hundsun.ares.studio.jres.basicdata.core"
+    modelName="Basicdata" editPluginClass="com.hundsun.ares.studio.jres.basicdata.ui.BasicDataUI"
+    reflectiveDelegation="true" importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective"
+    complianceLevel="6.0" copyrightFields="false" publicConstructors="true" editPluginID="com.hundsun.ares.studio.jres.basicdata.ui"
+    runtimeVersion="2.6" language="" usedGenPackages="../../com.hundsun.ares.studio.jres.metadata.core/model/metadata.genmodel#//metadata ../../com.hundsun.ares.studio.core/model/ares.genmodel#//model">
+  <foreignModel>basicdata.ecore</foreignModel>
+  <genPackages prefix="Basicdata" basePackage="com.hundsun.ares.studio.jres.basicdata.core"
+      disposableProviderFactory="true" ecorePackage="basicdata.ecore#/">
+    <genClasses ecoreClass="basicdata.ecore#//EpacakgeDefineList">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicdata.ecore#//EpacakgeDefineList/items"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="basicdata.ecore#//PackageDefine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//PackageDefine/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//PackageDefine/type"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//SingleTable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//SingleTable/master"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//MasterSlaveTable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//MasterSlaveTable/master"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//MasterSlaveTable/slave"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//MasterSlaveLinkTable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//MasterSlaveLinkTable/master"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//MasterSlaveLinkTable/slave"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//MasterSlaveLinkTable/link"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//BasicDataBaseModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataBaseModel/extend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataBaseModel/file"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//StandardFieldPackageDefine">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicdata.ecore#//StandardFieldPackageDefine/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//StandardFieldModelAndData">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicdata.ecore#//StandardFieldModelAndData/model"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference basicdata.ecore#//StandardFieldModelAndData/data"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//StandardFieldColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//StandardFieldColumn/standardField"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//BasicDataField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/chineseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/mark"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/comments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicdata.ecore#//BasicDataField/columnType"/>
+    </genClasses>
+    <genClasses ecoreClass="basicdata.ecore#//BasicdataItem"/>
+  </genPackages>
+</genmodel:GenModel>

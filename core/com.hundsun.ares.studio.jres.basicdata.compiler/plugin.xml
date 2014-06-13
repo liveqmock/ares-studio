@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.hundsun.ares.studio.compiler.compilerFactories">
+      <factory
+            class="com.hundsun.ares.studio.jres.basicdata.compile.BasicDataInstallCompileFactory"
+            id="com.hundsun.ares.studio.jres.basicdata.compile.factory.install"
+            name="基础数据安装模式脚本编译器"
+            priority="Normal"
+            types="#basicdata.gensql.install#">
+      </factory>
+      <factory
+            class="com.hundsun.ares.studio.jres.basicdata.compile.BasicDataUpdataCompileFactory"
+            id="com.hundsun.ares.studio.jres.basicdata.compile.factory.update"
+            name="基础数据升级模式脚本编译器"
+            priority="Normal"
+            types="#basicdata.gensql.update#">
+      </factory>
+   </extension>
+
+</plugin>

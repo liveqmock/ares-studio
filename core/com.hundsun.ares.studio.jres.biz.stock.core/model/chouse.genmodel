@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.jres.biz.stock.core/src"
+    editDirectory="/com.hundsun.ares.studio.jres.biz.stock.ui/src" modelPluginID="com.hundsun.ares.studio.jres.biz.stock.core"
+    modelName="Chouse" editPluginClass="com.hundsun.ares.studio.jres.clearinghouse.Activator"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    providerRootExtendsClass="" editPluginID="com.hundsun.ares.studio.jres.biz.stock.ui"
+    runtimeVersion="2.6" usedGenPackages="../../com.hundsun.ares.studio.core/model/ares.genmodel#//model ../../com.hundsun.ares.studio.jres.database.core/model/database.genmodel#//database">
+  <foreignModel>chouse.ecore</foreignModel>
+  <genPackages prefix="Chouse" basePackage="com.hundsun.ares.studio.jres.model" disposableProviderFactory="true"
+      ecorePackage="chouse.ecore#/">
+    <genClasses ecoreClass="chouse.ecore#//TableSpaceProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceProperty/reduTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceProperty/chearTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceProperty/chearTableIndex"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//TableSpaceRelationProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceRelationProperty/hisSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceRelationProperty/hisIndexSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceRelationProperty/fileSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableSpaceRelationProperty/fileIndexSpace"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//TableBaseProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/chear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/redu"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/history"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/historySpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/historyIndexSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/objectID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/splitField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/splitNum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/startData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/userSplit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/isRedu"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/isClear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/fileSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/fileIndexSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//TableBaseProperty/clearIndexSpace"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//HistoryProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//HistoryProperty/internalVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RevisionHistoryProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RevisionHistoryProperty/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RevisionHistoryProperty/actionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RevisionHistoryProperty/actionDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//Modification"/>
+    <genClasses ecoreClass="chouse.ecore#//StockTableProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockTableProperty/history"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//StockColumnProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockColumnProperty/flag"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//StockIndexProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockIndexProperty/flag"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//StockTSRelationProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockTSRelationProperty/hisSpace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockTSRelationProperty/hisIndexSpace"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//StockProjectProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockProjectProperty/baseVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//StockDBContextProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockDBContextProperty/startVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//StockDBContextProperty/endVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddTableModification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//AddTableModification/newSelfTable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//AddTableModification/newHistoryTable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddTableModification/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddTableModification/indexes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddTableModification/keys"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//HisTableColumn"/>
+    <genClasses ecoreClass="chouse.ecore#//AddTableColumnModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddTableColumnModification/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveTableColumnModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveTableColumnModification/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemovedTableColumn"/>
+    <genClasses ecoreClass="chouse.ecore#//RenameTableColumnModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RenameTableColumnModification/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RTCMDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RTCMDetail/newName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RTCMDetail/oldName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RTCMDetail/mark"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ColumnChangeDetail">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ColumnChangeDetail/snapshot"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ChangeTableColumnTypeModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ChangeTableColumnTypeModification/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//CTCTMDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//CTCTMDetail/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//CTCTMDetail/newType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//CTCTMDetail/mark"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddIndexModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddIndexModification/indexs"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveIndexModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveIndexModification/indexs"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddIndexFieldModification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chouse.ecore#//AddIndexFieldModification/indexs"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveIndexFieldModification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveIndexFieldModification/indexs"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddIndexField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//AddIndexField/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddIndexField/indexFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//AddIndexField/mark"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveIndexField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RemoveIndexField/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RemoveIndexField/mark"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveIndexField/indexFields"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemovedIndex">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RemovedIndex/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//RemovedIndex/mark"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ChangeTableColumnPrimaryKeyModifycation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ChangeTableColumnPrimaryKeyModifycation/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//CTCPMDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//CTCPMDetail/primarkKey"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ChangeTableColumnUniqueModifycation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ChangeTableColumnUniqueModifycation/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//CTCUMDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//CTCUMDetail/unique"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ModifyDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//ModifyDetail/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//ModifyDetail/mark"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ChangeTableColumnNullableModifycation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ChangeTableColumnNullableModifycation/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//CTCNMDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//CTCNMDetail/nullable"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddTableColumnPKModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddTableColumnPKModification/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveTableColumnPKModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveTableColumnPKModification/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddTableColumnUniqueModifycation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddTableColumnUniqueModifycation/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveTableColumnUniqueModifycation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveTableColumnUniqueModifycation/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//AddConstraintModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//AddConstraintModification/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//RemoveConstraintModification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//RemoveConstraintModification/details"/>
+    </genClasses>
+    <genClasses ecoreClass="chouse.ecore#//ConstraintModifyDetail">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//ConstraintModifyDetail/mark"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//ConstraintModifyDetail/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ConstraintModifyDetail/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chouse.ecore#//ConstraintModifyDetail/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chouse.ecore#//ConstraintModifyDetail/foreignKey"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

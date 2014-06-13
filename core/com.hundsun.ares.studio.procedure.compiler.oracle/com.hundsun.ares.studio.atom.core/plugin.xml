@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/cres/atom/1.0.0"
+            class="com.hundsun.ares.studio.atom.AtomPackage"
+            genModel="model/atom.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.atom.constants.IAtomRefType"
+            resType="com.hundsun.ares.studio.atom.constants.IAtomResType">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.jres.model.metadata.StandardField"
+            class="com.hundsun.ares.studio.atom.adapters.StandardFieldAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.atom.InternalParam">
+         </adapter>
+      </factory>
+   </extension>
+     <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.atom.AtomFunction"
+            class="com.hundsun.ares.studio.atom.AtomAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.core.model.IReferenceProvider2">
+         </adapter>
+      </factory>
+   </extension>
+
+</plugin>

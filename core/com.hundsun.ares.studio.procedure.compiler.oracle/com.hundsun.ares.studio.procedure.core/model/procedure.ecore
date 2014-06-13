@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="procdure" nsURI="http://www.hundsun.com/ares/studio/procedure/1.0.0"
+    nsPrefix="procedure">
+  <eClassifiers xsi:type="ecore:EClass" name="Procedure" eSuperTypes="../../com.hundsun.ares.studio.biz.core/model/biz.ecore#//BizInterface ../../com.hundsun.ares.studio.core/model/ares.ecore#//JRESResourceInfo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="objectId"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="database" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudoCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalVariables" upperBound="-1"
+        eType="ecore:EClass ../../com.hundsun.ares.studio.biz.core/model/biz.ecore#//Parameter"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beginCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="number"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defineType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="AS"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bizType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="function"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTableInfo" upperBound="-1"
+        eType="#//RelatedInfo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedBasicDataInfo" upperBound="-1"
+        eType="#//RelatedInfo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="autoTransaction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DefineType">
+    <eLiterals name="AS"/>
+    <eLiterals name="PIPELINED" value="1" literal="PIPELINED"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BizType">
+    <eLiterals name="function"/>
+    <eLiterals name="procedure" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelatedInfo" eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//ExtensibleModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="id"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

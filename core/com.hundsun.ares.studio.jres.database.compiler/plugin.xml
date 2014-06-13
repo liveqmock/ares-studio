@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.hundsun.ares.studio.compiler.compilerFactories">
+      <factory
+            class="com.hundsun.ares.studio.jres.database.compiler.DatabaseFullCompilerFactory"
+            id="jres.compiler.database.factory.file.full"
+            name="数据库全量脚本编译器"
+            priority="Normal"
+            types="#database.gensql.full#">
+      </factory>
+      <factory
+            class="com.hundsun.ares.studio.jres.database.compiler.DatabasePatchCompilerFactory"
+            id="jres.compiler.database.factory.file.patch"
+            name="数据库升级脚本编译器"
+            priority="Normal"
+            types="#database.gensql.patch#">
+      </factory>
+      
+      <factory
+            class="com.hundsun.ares.studio.jres.database.compiler.DatabaseFullFKCompilerFactory"
+            id="jres.compiler.database.factory.file.full.fk"
+            name="数据库全量外键脚本编译器"
+            priority="Normal"
+            types="#database.gensql.fk.full#">
+      </factory>
+            <factory
+            class="com.hundsun.ares.studio.jres.database.compiler.TablespaceFullCompilerFactory"
+            id="jres.compiler.database.factory.tablespace.full"
+            name="数据库表空间脚本编辑器"
+            priority="Normal"
+            types="#database.space.gensql.full#">
+      </factory>
+      <factory
+            class="com.hundsun.ares.studio.jres.database.compiler.TableUserFullCompilerFactory"
+            id="jres.compiler.database.factory.user.full"
+            name="数据库用户脚本编辑器"
+            priority="Highest"
+            types="#database.user.gensql.full#">
+      </factory>
+   </extension>
+
+</plugin>

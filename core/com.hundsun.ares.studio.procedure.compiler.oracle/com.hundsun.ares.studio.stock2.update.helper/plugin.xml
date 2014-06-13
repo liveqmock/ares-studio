@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="com.hundsun.ares.studio.procedure.ui.stock2.projectupdateinit"
+            objectClass="org.eclipse.core.resources.IProject">
+         <menu
+               id="com.hundsun.ares.studio.cres.ui.menu.projectupdateinit"
+               label="工程升级初始化">
+            <separator
+                  name="initfielddftvalue">
+            </separator>
+         </menu>
+         <action
+               class="com.hundsun.ares.studio.cres.ui.action.InitFieldDefaultValueAction"
+               id="com.hundsun.ares.studio.cres.ui.action.initfielddefaultvalue"
+               label="初始化资源字段默认值"
+               menubarPath="com.hundsun.ares.studio.cres.ui.menu.projectupdateinit/initfielddftvalue"
+               state="true"
+               style="push"
+               tooltip="如果资源字段（表字段、过程输入输出参数）默认值不存在，而使用的标准字段有默认值，则将字段默认值初始化为标准字段的默认值">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

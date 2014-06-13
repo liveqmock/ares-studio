@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="converterHandles" name="converterHandles" schema="schema/converterHandles.exsd"/>
+      <extension
+         point="com.hundsun.ares.studio.core.ares_extend_model_serializer">
+      <serializer
+            class="com.hundsun.ares.studio.jres.modelconvert.EMFExtendModelConverter"
+            key="module_rev_his_key"
+            targetClassName="com.hundsun.ares.studio.core.model.ModuleProperty">
+      </serializer>
+      <serializer
+            class="com.hundsun.ares.studio.jres.modelconvert.EMFExtendModelConverter"
+            key="ProjectRevisionHistory"
+            targetClassName="com.hundsun.ares.studio.internal.core.ARESProjectProperty">
+      </serializer>
+   </extension>
+</plugin>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/jres/metadata/1.0.0"
+            class="com.hundsun.ares.studio.jres.model.metadata.MetadataPackage"
+            genModel="model/metadata.genmodel"/>
+   </extension>
+   <!--extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.hundsun.com/ares/studio/jres/metadata/1.0.0"
+            class="com.hundsun.ares.studio.jres.model.metadata.provider.MetadataItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension-->
+   <extension
+         point="com.hundsun.ares.studio.core.services">
+      <service
+            factory="com.hundsun.ares.studio.jres.metadata.internal.service.MetadataServiceFactory"
+            id="com.hundsun.ares.studio.jres.metadata.core.dataservice"
+            priority="Lowest"
+            type="com.hundsun.ares.studio.jres.metadata.service.IMetadataService">
+      </service>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.jres.metadata.constant.IMetadataRefType"
+            resType="com.hundsun.ares.studio.jres.metadata.constant.IMetadataResType">
+      </mapping>
+   </extension>
+      <extension
+         point="com.hundsun.ares.studio.jres.script.scriptpoxyfactory">
+      <PoxyFactory
+            class="com.hundsun.ares.studio.jres.metadata.core.script.impl.MetadataScriptPoxyFactory"
+            id="jres.metadata">
+      </PoxyFactory>
+   </extension>
+      <extension
+            point="com.hundsun.ares.studio.core.propertyHandlerFactory">
+         <factory
+               class="com.hundsun.ares.studio.jres.metadata.core.handlers.MetadataPropertyHandlerFactoryProvider"
+               id="com.hundsun.ares.studio.jres.metadata.core.metadataPropertyHandlerFactory">
+         </factory>
+      </extension>
+</plugin>

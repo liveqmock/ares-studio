@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Ares Studio" uid="com.hundsun.ares.studio.product" id="com.hundsun.ares.studio.product" application="org.eclipse.ui.ide.workbench" version="1.0" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/com.hundsun.ares.studio/icons/about.png"/>
+      <text>
+         %aboutText
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>--launcher.defaultAction openFile
+--launcher.XXMaxPermSize
+200M</programArgs>
+      <vmArgs>-Xms128m
+
+-Xmx256m
+-Dorg.eclipse.epp.usagedata.recording.upload-url=http://rdc.hundsun.com:8080/studioudc/upload</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/com.hundsun.ares.studio/icons/ares16.png" i32="/com.hundsun.ares.studio/icons/ares32.png"/>
+
+   <splash
+      location="com.hundsun.ares.studio"
+      startupProgressRect="0,315,500,15"
+      startupMessageRect="15,295,485,20"
+      startupForegroundColor="b3b3b3" />
+   <launcher name="studio">
+      <solaris/>
+      <win useIco="true">
+         <ico path="/com.hundsun.ares.studio/icons/launcher.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <features>
+      <feature id="org.eclipse.platform" version="3.6.2.r362_v20110210-9gF78Gs1FrIGnHDHWkEcopoN8AmxeZflGDGKQi"/>
+      <feature id="com.hundsun.ares.studio.platform" version="1.0.0.qualifier"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="5" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
+
+</product>

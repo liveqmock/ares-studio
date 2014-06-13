@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.devtool.v2.ui.editor" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="com.hundsun.ares.devtool.v2.ui.editor" id="ares_page" name="ares_page"/>
+      </appinfo>
+      <documentation>
+         提供对ARES编辑器拓展页面的功能，需要用户自己实现page的类
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="pageItem"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="pageItem">
+      <annotation>
+         <documentation>
+            表示一个拓展的页面，需要用户自己提供页面的实现类
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="pageid" type="string">
+            <annotation>
+               <documentation>
+                  页面唯一ID标识，程序中可根据该ID获得页面实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  页面名称，对应编辑器页面TAB页的标题
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  页面的实现类提供器，必须从PageExtendPointProvider继承
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="com.hundsun.ares.studio.ui.page.ExtendPageWithMyDirtySystem:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="editor_id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  对应编辑器的拓展点ID，指定该页面要配置到那个编辑器上
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="identifier" basedOn="org.eclipse.ui.editors/editor/@id"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="order" type="string">
+            <annotation>
+               <documentation>
+                  输入一个数字，代表顺序，数据越小越靠前
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="hidden" type="boolean">
+            <annotation>
+               <documentation>
+                  隐藏页面，不会创建界面
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         ARES1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         The following is an example 
+of an hsobject editor page definition: 
+&lt;p&gt;
+&lt;pre&gt;
+ &lt;extension
+   id=&quot;testpage&quot;
+   name=&quot;test&quot;
+  point=&quot;com.hundsun.ares.devtool.v2.ui.editor.ares_page&quot;&gt;
+   &lt;pageItem
+            class=&quot;imporve.extendpoint.testPagePoint&quot;
+             editor_id=&quot;com.hundsun.ares.devtool.v2.ui.editor.ObjectEditor2&quot;
+            name=&quot;测试page&quot;
+            pageid=&quot;page1&quot;&gt;
+   &lt;/pageItem&gt;
+ &lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;getExtendsPointPages().get(pageID)
+&lt;p&gt;AbstractHSFormEditor中通过该方法获得创建的页面实例
+      </documentation>
+   </annotation>
+
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;Copyright: Copyright (c) 2009&lt;/p&gt;
+&lt;p&gt;Company: 恒生电子股份有限公司&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+</schema>

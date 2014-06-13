@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            category="com.hundsun.ares.studio.export.category"
+            class="com.hundsun.ares.studio.jres.service.stock.ExportInterfaceWizard"
+            icon="icons/excel.png"
+            id="com.hundsun.ares.studio.jres.service.ui.export_interface"
+            name="服务接口">
+      </wizard>
+   </extension>
+</plugin>

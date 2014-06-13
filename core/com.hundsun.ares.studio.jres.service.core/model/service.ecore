@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="service"
+    nsURI="http://www.hundsun.com/ares/studio/jres/service/1.0.0" nsPrefix="service">
+  <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="../../com.hundsun.ares.studio.core/model/ares.ecore#//JRESResourceInfo">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="objectId"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="ecore:EClass ../../com.hundsun.ares.studio.biz.core/model/biz.ecore#//BizInterface"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

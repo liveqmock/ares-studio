@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ /**
+  * 源程序名称：${file_name}
+  * 软件著作权：恒生电子股份有限公司 版权所有
+  * 系统名称：JRES Studio
+  * 模块名称：${project_name}
+  * 功能说明：$$desc
+  * 相关文档：
+  * 作者：${user}
+  */
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated service -->
+      <package
+            uri="http://www.hundsun.com/ares/studio/jres/service/1.0.0"
+            class="com.hundsun.ares.studio.jres.service.ServicePackage"
+            genModel="model/service.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.jres.script.scriptpoxyfactory">
+      <PoxyFactory
+            class="com.hundsun.ares.studio.jres.service.script.ServiceScriptProxyFactory"
+            id="jres.biz">
+      </PoxyFactory>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.jres.service.Service"
+            class="com.hundsun.ares.studio.jres.service.core.ServiceAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.core.model.IReferenceProvider2">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.propertyHandlerFactory">
+      <factory
+            class="com.hundsun.ares.studio.jres.service.core.ServicePropertyHandlerFactoryProvider"
+            id="com.hundsun.ares.studio.jres.service.core.servicePropertyHandlerFactory">
+      </factory>
+   </extension>
+
+</plugin>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.core/src" editDirectory="/com.hundsun.ares.studio.ui/src"
+    modelPluginID="com.hundsun.ares.studio.core" modelName="Ares" editPluginClass="com.hundsun.ares.studio.ui.ARESUI"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" providerRootExtendsClass="" editPluginID="com.hundsun.ares.studio.ui"
+    runtimeVersion="2.6">
+  <foreignModel>ares.ecore</foreignModel>
+  <genPackages prefix="Core" basePackage="com.hundsun.ares.studio.core" disposableProviderFactory="true"
+      ecorePackage="ares.ecore#/">
+    <genDataTypes ecoreDataType="ares.ecore#//Dom4jDocument"/>
+    <genClasses ecoreClass="ares.ecore#//JRESResourceInfo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//JRESResourceInfo/histories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//JRESResourceInfo/fullyQualifiedName"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//BasicResourceInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//BasicResourceInfo/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//BasicResourceInfo/chineseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//BasicResourceInfo/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//BasicResourceInfo/objectId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//BasicResourceInfo/group"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//RevisionHistory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/modifiedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/orderNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/modifiedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/charger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/modifiedReason"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/modified"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//RevisionHistory/location"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ares.ecore#//ExtensibleModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//ExtensibleModel/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//ExtensibleModel/data2"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//EStringToEObjectMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//EStringToEObjectMapEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//EStringToEObjectMapEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ares.ecore#//Reference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//Reference/type"/>
+      <genOperations ecoreOperation="ares.ecore#//Reference/getValue"/>
+      <genOperations ecoreOperation="ares.ecore#//Reference/setValue">
+        <genParameters ecoreParameter="ares.ecore#//Reference/setValue/value"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ares.ecore#//ReferenceWithNamespace">
+      <genOperations ecoreOperation="ares.ecore#//ReferenceWithNamespace/setNamespace">
+        <genParameters ecoreParameter="ares.ecore#//ReferenceWithNamespace/setNamespace/ns"/>
+      </genOperations>
+      <genOperations ecoreOperation="ares.ecore#//ReferenceWithNamespace/getNamespace"/>
+      <genOperations ecoreOperation="ares.ecore#//ReferenceWithNamespace/setId">
+        <genParameters ecoreParameter="ares.ecore#//ReferenceWithNamespace/setId/id"/>
+      </genOperations>
+      <genOperations ecoreOperation="ares.ecore#//ReferenceWithNamespace/getId"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ares.ecore#//IReferenceProvider">
+      <genOperations ecoreOperation="ares.ecore#//IReferenceProvider/getReferences"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ares.ecore#//IJSONData">
+      <genOperations ecoreOperation="ares.ecore#//IJSONData/toJSON"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//ExtensibleModelConfigProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelConfigProperty/xml"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//ExtensibleModelConfigProperty/attributes"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelConfigProperty/xmlCache"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//ExtensibleModelAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelAttribute/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelAttribute/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelAttribute/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelAttribute/lable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelAttribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ares.ecore#//ExtensibleModelAttribute/validate"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//UserExtensibleProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//UserExtensibleProperty/map"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//ModuleExtensibleModel"/>
+    <genClasses ecoreClass="ares.ecore#//ProjectExtensibleModel"/>
+    <genClasses ecoreClass="ares.ecore#//ProjectRevisionHistoryProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ares.ecore#//ProjectRevisionHistoryProperty/histories"/>
+    </genClasses>
+    <genClasses ecoreClass="ares.ecore#//ModuleRevisionHistoryList"/>
+  </genPackages>
+</genmodel:GenModel>

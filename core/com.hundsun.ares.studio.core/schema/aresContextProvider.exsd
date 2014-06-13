@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.studio.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.hundsun.ares.studio.core" id="aresContextProvider" name="AresContextProvider"/>
+      </appInfo>
+      <documentation>
+         注册一个ContextProvider，用于在错误检查等时候使用。
+框架会注册默认的ContextProvider，提供错误检查的时候的上下文信息（例如，有哪些模块根，模块，有哪些资源）&lt;p&gt;
+用户自行注册的ContextProvider可以在检查的时候通过contexts.get(id)来获得。
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="provider" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="provider">
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  实现类。
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="com.hundsun.ares.studio.core.validate.AbstractAresContext:com.hundsun.ares.studio.core.validate.IAresContext"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  唯一标识
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         下面的代码是框架注册的默认ContextProvider的信息：&lt;p&gt;
+&lt;pre&gt;
+   &lt;extension
+         point=&quot;com.hundsun.ares.studio.core.aresContextProvider&quot;&gt;
+      &lt;provider
+            class=&quot;com.hundsun.ares.studio.core.validate.DefaultContextProvider&quot;
+            id=&quot;com.hundsun.ares.studio.core.defaultContext&quot;&gt;
+      &lt;/provider&gt;
+   &lt;/extension&gt;
+&lt;/pre&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiinfo"/>
+      </appInfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

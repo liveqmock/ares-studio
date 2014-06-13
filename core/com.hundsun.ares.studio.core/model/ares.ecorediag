@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_wceWQNq3EeOda9eXl4E01A" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_wiGdINq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wjhZcNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wjlD0Nq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkFaINq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//JRESResourceInfo/fullyQualifiedName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkFaIdq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wjlD0dq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wjlD0tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wjlD09q3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wjmR8Nq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wjmR8dq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wjmR8tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wjmR89q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wiGdIdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//JRESResourceInfo"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wiGdItq3EeOda9eXl4E01A" x="487" y="649"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkGBMNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkGBM9q3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkGoQNq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkGoSNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//BasicResourceInfo/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkGoSdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkGoStq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//BasicResourceInfo/chineseName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkGoS9q3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkHPUNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//BasicResourceInfo/description"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkHPUdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkHPUtq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//BasicResourceInfo/objectId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkHPU9q3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkHPVNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//BasicResourceInfo/group"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkHPVdq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkGoQdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkGoQtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkGoQ9q3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkGoRNq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkGoRdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkGoRtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkGoR9q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkGBMdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//BasicResourceInfo"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkGBMtq3EeOda9eXl4E01A" x="730" y="382"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkH2YNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkIdcNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkJEgNq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkJrkNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/modifiedDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkJrkdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkLgwNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/version"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkLgwdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkMH0Nq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/orderNumber"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkMH0dq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkOkENq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/modifiedBy"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkOkEdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkOkEtq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/charger"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkOkE9q3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkPLINq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/modifiedReason"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkPLIdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkPyMNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/modified"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkPyMdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkQZQNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/comment"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkRAUNq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkRnYNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//RevisionHistory/location"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkRnYdq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkJEgdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkJEgtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkJEg9q3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkJEhNq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkJEhdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkJEhtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkJEh9q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkH2Ydq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//RevisionHistory"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkH2Ytq3EeOda9eXl4E01A" x="229" y="382"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkS1gNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkUDoNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkUDodq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkUDotq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkUDo9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkUDpNq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkUqsNq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkUqsdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkUqstq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkUqs9q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkS1gdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ExtensibleModel"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkS1gtq3EeOda9eXl4E01A" x="397" y="210"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkVRwNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkXG8Nq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkXG8dq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkYVENq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//EStringToEObjectMapEntry/key"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkYVEdq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkXG8tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkXG89q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkXG9Nq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkXG9dq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkXG9tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkXG99q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkXG-Nq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkVRwdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//EStringToEObjectMapEntry"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkVRwtq3EeOda9eXl4E01A" x="253"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkY8INq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkZjMNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkaKQNq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkaxUNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//Reference/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkaxUdq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkaKQdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkaKQtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkaKQ9q3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkaKRNq3EeOda9eXl4E01A" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_wkbYYNq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//Reference/getValue"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkbYYdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkbYYtq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//Reference/setValue"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkbYY9q3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkaKRdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkaKRtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkaKR9q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkY8Idq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//Reference"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkY8Itq3EeOda9eXl4E01A" x="1220"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkbYZNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkb_cNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkcmgNq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkcmgdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkcmgtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkcmg9q3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkcmhNq3EeOda9eXl4E01A" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_wkcmiNq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//ReferenceWithNamespace/setNamespace"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkcmidq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkcmitq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//ReferenceWithNamespace/getNamespace"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkcmi9q3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkdNkNq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//ReferenceWithNamespace/setId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkdNkdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkd0oNq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//ReferenceWithNamespace/getId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkd0odq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkcmhdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkcmhtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkcmh9q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkbYZdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ReferenceWithNamespace"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkbYZtq3EeOda9eXl4E01A" x="1201" y="210"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkd0otq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkebsNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkebsdq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkebstq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkebs9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkebtNq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkebtdq3EeOda9eXl4E01A" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_wkfCwNq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//IReferenceProvider/getReferences"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkfCwdq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkebttq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkebt9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkebuNq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkd0o9q3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//IReferenceProvider"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkd0pNq3EeOda9eXl4E01A" x="960" y="382"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkfCwtq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkfp0Nq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkfp0dq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkfp0tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkfp09q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkfp1Nq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkfp1dq3EeOda9eXl4E01A" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_wkfp2dq3EeOda9eXl4E01A" type="2002">
+        <element xmi:type="ecore:EOperation" href="ares.ecore#//IJSONData/toJSON"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkfp2tq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkfp1tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkfp19q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkfp2Nq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkfCw9q3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//IJSONData"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkfCxNq3EeOda9eXl4E01A" x="501"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkfp29q3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkgQ4Nq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkgQ4dq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkgQ6dq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelConfigProperty/xml"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkgQ6tq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkg38Nq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelConfigProperty/xmlCache"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkg38dq3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkgQ4tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkgQ49q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkgQ5Nq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkgQ5dq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkgQ5tq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkgQ59q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkgQ6Nq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkfp3Nq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ExtensibleModelConfigProperty"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkfp3dq3EeOda9eXl4E01A" x="1449" y="210"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkg38tq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkhfANq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkhfAdq3EeOda9eXl4E01A" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_wkhfCdq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelAttribute/uri"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkhfCtq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkiGENq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelAttribute/className"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkiGEdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkiGEtq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelAttribute/key"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkiGE9q3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkiGFNq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelAttribute/lable"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkiGFdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkitINq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelAttribute/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkitIdq3EeOda9eXl4E01A"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wkitItq3EeOda9eXl4E01A" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ares.ecore#//ExtensibleModelAttribute/validate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wkitI9q3EeOda9eXl4E01A"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkhfAtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkhfA9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkhfBNq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkhfBdq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkhfBtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkhfB9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkhfCNq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkg389q3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ExtensibleModelAttribute"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkg39Nq3EeOda9eXl4E01A" x="1468"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkitJNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkjUMNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkjUMdq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkjUMtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkjUM9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkjUNNq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkjUNdq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkjUNtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkjUN9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkjUONq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkitJdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//UserExtensibleProperty"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkitJtq3EeOda9eXl4E01A" x="706"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkj7QNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkkiUNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkkiUdq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkkiUtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkkiU9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkkiVNq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkkiVdq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkkiVtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkkiV9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkkiWNq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkj7Qdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ModuleExtensibleModel"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkj7Qtq3EeOda9eXl4E01A" y="382"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wklJYNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wklwcNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wklwcdq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wklwctq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wklwc9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wklwdNq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wklwddq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wklwdtq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wklwd9q3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wklweNq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wklJYdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ProjectExtensibleModel"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wklJYtq3EeOda9eXl4E01A" x="505" y="382"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkmXgNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkm-kNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wkm-kdq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wknloNq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wknlodq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wknlotq3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wknlo9q3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wknlpNq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wknlpdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wknlptq3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkmXgdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ProjectRevisionHistoryProperty"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkmXgtq3EeOda9eXl4E01A" x="216" y="649"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkpa0Nq3EeOda9eXl4E01A" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_wkrQANq3EeOda9eXl4E01A" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_wkr3ENq3EeOda9eXl4E01A" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkqB4Nq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="ares.ecore#//Dom4jDocument"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkqB4dq3EeOda9eXl4E01A" x="930"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wktsQNq3EeOda9eXl4E01A" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_wkuTUNq3EeOda9eXl4E01A" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_wku6YNq3EeOda9eXl4E01A" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wku6Ydq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wku6Ytq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wku6Y9q3EeOda9eXl4E01A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wkvhcNq3EeOda9eXl4E01A" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_wkvhcdq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_wkvhctq3EeOda9eXl4E01A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_wkvhc9q3EeOda9eXl4E01A"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wktsQdq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ares.ecore#//ModuleRevisionHistoryList"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wktsQtq3EeOda9eXl4E01A" x="498" y="764"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_wceWQdq3EeOda9eXl4E01A"/>
+  <element xmi:type="ecore:EPackage" href="ares.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_wk5ScNq3EeOda9eXl4E01A" type="3002" source="_wiGdINq3EeOda9eXl4E01A" target="_wkH2YNq3EeOda9eXl4E01A">
+    <children xmi:type="notation:Node" xmi:id="_wk7HoNq3EeOda9eXl4E01A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wk7Hodq3EeOda9eXl4E01A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wk9j4Nq3EeOda9eXl4E01A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wk9j4dq3EeOda9eXl4E01A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wk5Scdq3EeOda9eXl4E01A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wk5Sctq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ares.ecore#//JRESResourceInfo/histories"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wk5Sc9q3EeOda9eXl4E01A" points="[0, 0, 161, 60]$[-161, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww7jUNq3EeOda9eXl4E01A" id="(0.2,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww7jUdq3EeOda9eXl4E01A" id="(0.745945945945946,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wk_ZENq3EeOda9eXl4E01A" type="3003" source="_wiGdINq3EeOda9eXl4E01A" target="_wkS1gNq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wk_ZEdq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wk_ZEtq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wk_ZE9q3EeOda9eXl4E01A" points="[0, 0, 110, 394]$[0, -30, 110, 364]$[-110, -30, 0, 364]$[-110, -394, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_0wdq3EeOda9eXl4E01A" id="(0.4,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_0wtq3EeOda9eXl4E01A" id="(0.496,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlAAINq3EeOda9eXl4E01A" type="3003" source="_wiGdINq3EeOda9eXl4E01A" target="_wkGBMNq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlAnMNq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlAnMdq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlAnMtq3EeOda9eXl4E01A" points="[0, 0, -205, 136]$[0, -30, -205, 106]$[205, -30, 0, 106]$[205, -136, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww68QNq3EeOda9eXl4E01A" id="(0.6,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww68Qdq3EeOda9eXl4E01A" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlAnM9q3EeOda9eXl4E01A" type="3003" source="_wiGdINq3EeOda9eXl4E01A" target="_wkd0otq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlAnNNq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlAnNdq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlAnNtq3EeOda9eXl4E01A" points="[0, 0, -408, 212]$[0, -30, -408, 182]$[408, -30, 0, 182]$[408, -212, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww8KYNq3EeOda9eXl4E01A" id="(0.8,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww8KYdq3EeOda9eXl4E01A" id="(0.49748743718592964,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlB1UNq3EeOda9eXl4E01A" type="3003" source="_wkH2YNq3EeOda9eXl4E01A" target="_wkS1gNq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlB1Udq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlB1Utq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlB1U9q3EeOda9eXl4E01A" points="[0, 0, -117, 127]$[0, -30, -117, 97]$[117, -30, 0, 97]$[117, -127, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww5uINq3EeOda9eXl4E01A" id="(0.4972972972972973,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww6VMNq3EeOda9eXl4E01A" id="(0.328,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlB1VNq3EeOda9eXl4E01A" type="3002" source="_wkS1gNq3EeOda9eXl4E01A" target="_wkVRwNq3EeOda9eXl4E01A">
+    <children xmi:type="notation:Node" xmi:id="_wlCcYNq3EeOda9eXl4E01A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wlCcYdq3EeOda9eXl4E01A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wlCcYtq3EeOda9eXl4E01A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wlCcY9q3EeOda9eXl4E01A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlB1Vdq3EeOda9eXl4E01A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlB1Vtq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ares.ecore#//ExtensibleModel/data2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlB1V9q3EeOda9eXl4E01A" points="[0, 0, 91, 155]$[-91, -155, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww9_kdq3EeOda9eXl4E01A" id="(0.328,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww9_ktq3EeOda9eXl4E01A" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlCcZNq3EeOda9eXl4E01A" type="3003" source="_wkS1gNq3EeOda9eXl4E01A" target="_wkfCwtq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlCcZdq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlCcZtq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlCcZ9q3EeOda9eXl4E01A" points="[0, 0, -92, 155]$[0, -30, -92, 125]$[92, -30, 0, 125]$[92, -155, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww-moNq3EeOda9eXl4E01A" id="(0.664,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww-modq3EeOda9eXl4E01A" id="(0.4965034965034965,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlDDcNq3EeOda9eXl4E01A" type="3003" source="_wkbYZNq3EeOda9eXl4E01A" target="_wkY8INq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlDDcdq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlDDctq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlDDc9q3EeOda9eXl4E01A" points="[0, 0, 0, 126]$[0, -126, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww-motq3EeOda9eXl4E01A" id="(0.49732620320855614,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_NsNq3EeOda9eXl4E01A" id="(0.4966442953020134,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlDqgNq3EeOda9eXl4E01A" type="3002" source="_wkfp29q3EeOda9eXl4E01A" target="_wkg38tq3EeOda9eXl4E01A">
+    <children xmi:type="notation:Node" xmi:id="_wlDqhNq3EeOda9eXl4E01A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wlDqhdq3EeOda9eXl4E01A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wlDqhtq3EeOda9eXl4E01A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wlDqh9q3EeOda9eXl4E01A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlDqgdq3EeOda9eXl4E01A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlDqgtq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ares.ecore#//ExtensibleModelConfigProperty/attributes"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlDqg9q3EeOda9eXl4E01A" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww8xcdq3EeOda9eXl4E01A" id="(0.49767441860465117,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww8xctq3EeOda9eXl4E01A" id="(0.4971751412429379,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlDqiNq3EeOda9eXl4E01A" type="3003" source="_wkj7QNq3EeOda9eXl4E01A" target="_wkS1gNq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlDqidq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlDqitq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlDqi9q3EeOda9eXl4E01A" points="[0, 0, -333, 127]$[0, -30, -333, 97]$[333, -30, 0, 97]$[333, -127, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww9YgNq3EeOda9eXl4E01A" id="(0.4970414201183432,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww9_kNq3EeOda9eXl4E01A" id="(0.16,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlERkNq3EeOda9eXl4E01A" type="3003" source="_wklJYNq3EeOda9eXl4E01A" target="_wkS1gNq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlERkdq3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlERktq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlERk9q3EeOda9eXl4E01A" points="[0, 0, 97, 127]$[0, -30, 97, 97]$[-97, -30, 0, 97]$[-97, -127, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_Ns9q3EeOda9eXl4E01A" id="(0.49696969696969695,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_0wNq3EeOda9eXl4E01A" id="(0.744,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlFfsNq3EeOda9eXl4E01A" type="3002" source="_wkmXgNq3EeOda9eXl4E01A" target="_wkH2YNq3EeOda9eXl4E01A">
+    <children xmi:type="notation:Node" xmi:id="_wlGGwNq3EeOda9eXl4E01A" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wlGGwdq3EeOda9eXl4E01A" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_wlGt0Nq3EeOda9eXl4E01A" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_wlGt0dq3EeOda9eXl4E01A" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlFfsdq3EeOda9eXl4E01A" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlFfstq3EeOda9eXl4E01A" fontColor="4210752" fontName="Microsoft YaHei UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ares.ecore#//ProjectRevisionHistoryProperty/histories"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlFfs9q3EeOda9eXl4E01A" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww8KYtq3EeOda9eXl4E01A" id="(0.4976303317535545,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww8xcNq3EeOda9eXl4E01A" id="(0.4972972972972973,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_wlGt0tq3EeOda9eXl4E01A" type="3003" source="_wktsQNq3EeOda9eXl4E01A" target="_wiGdINq3EeOda9eXl4E01A">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_wlGt09q3EeOda9eXl4E01A" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_wlGt1Nq3EeOda9eXl4E01A" fontName="Microsoft YaHei UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wlGt1dq3EeOda9eXl4E01A" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_Nsdq3EeOda9eXl4E01A" id="(0.4972677595628415,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ww_Nstq3EeOda9eXl4E01A" id="(0.4975609756097561,1.0)"/>
+  </edges>
+</notation:Diagram>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.emfadapter/src"
+    editDirectory="/com.hundsun.ares.studio.emfadapter/src" editorDirectory="/com.hundsun.ares.studio.emfadapter.editor/src"
+    modelPluginID="com.hundsun.ares.studio.emfadapter" modelName="EmfExtendAble" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>EmfExtendAble.ecore</foreignModel>
+  <genPackages prefix="Model" basePackage="com.hundsun.ares.studio" disposableProviderFactory="true"
+      ecorePackage="EmfExtendAble.ecore#/">
+    <genClasses image="false" ecoreClass="EmfExtendAble.ecore#//EmfExtendAble">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EmfExtendAble.ecore#//EmfExtendAble/map"/>
+    </genClasses>
+    <genClasses ecoreClass="EmfExtendAble.ecore#//IExtendAbleModel"/>
+    <genClasses ecoreClass="EmfExtendAble.ecore#//StringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EmfExtendAble.ecore#//StringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EmfExtendAble.ecore#//StringMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="EmfExtendAble.ecore#//EMapImprove">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EmfExtendAble.ecore#//EMapImprove/map"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EmfExtendAble.ecore#//IExtendFieldModel"/>
+    <genClasses image="false" ecoreClass="EmfExtendAble.ecore#//Map"/>
+    <genClasses ecoreClass="EmfExtendAble.ecore#//ExtendFieldModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EmfExtendAble.ecore#//ExtendFieldModel/extendStrings"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

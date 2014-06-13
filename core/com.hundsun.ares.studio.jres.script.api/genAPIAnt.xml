@@ -1,0 +1,28 @@
+
+<project name="gen_JRES_javadoc" default="genjavadoc">
+
+	<property name="build" value="D:/temp" />
+	<!--API插件中的包路径-->
+	<property name="script_api_packages" value="com.hundsun.ares.studio.jres.script.api.wrap,com.hundsun.ares.studio.jres.script.api.model" />
+	<!--有哪些代码路径-->
+	<property name="docpackages" value="${script_api_packages}" />
+
+	<target name="genjavadoc" description="Generate the Javadoc HTML pages.">
+		<delete dir="${build}/javadoc" />
+		<mkdir dir="${build}/javadoc" />
+		
+		<javadoc destdir="${build}/javadoc" windowtitle="Library" use="yes" linksource="no" 
+			splitindex="yes" encoding="GBK" docencoding="GBK" packagenames="${docpackages}" noindex="false" >
+			<group title="Script framework" packages="script_api_packages" />
+			
+			<!--有哪些代码路径-->
+			<sourcepath>
+				<dirset dir="../.">
+					<include name="**/com.hundsun.ares.studio.jres.script.api/src"/>
+				</dirset>
+			</sourcepath>
+
+		</javadoc>
+	</target>
+
+</project>

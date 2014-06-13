@@ -1,0 +1,10 @@
+#Tue Sep 17 10:12:19 CST 2013
+eclipse.preferences.version=1
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/DefaultSQLSyntax.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/ISQLPartitions.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/ISQLSyntax.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/SQLCodeScanner.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/SQLColorProvider.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/SQLPartitionScanner.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/SQLSourceViewerConfiguration.java=GBK
+encoding//src/com/hundsun/ares/studio/ui/editor/text/sql/SQLWordDetector.java=GBK

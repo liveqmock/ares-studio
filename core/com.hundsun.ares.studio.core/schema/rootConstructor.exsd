@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.studio.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.hundsun.ares.studio.core" id="rootConstructor" name="模块根初始化器"/>
+      </appInfo>
+      <documentation>
+         可以用这个扩展点在模块根创建的时候做一些初始化的操作。
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <choice>
+            <element ref="constructor" minOccurs="0" maxOccurs="unbounded"/>
+         </choice>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="constructor">
+      <complexType>
+         <attribute name="rootType" type="string" use="required">
+            <annotation>
+               <documentation>
+                  对应的模块根类型ID
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="identifier" basedOn="com.hundsun.ares.studio.core.moduleRoot/root/@id"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  名字，可选
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  实现类，必须实现com.hundsun.ares.studio.core.IModuleRootConstructor这个接口。
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":com.hundsun.ares.studio.core.IModuleRootConstructor"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         &lt;pre&gt;
+   &lt;extension
+         point=&quot;com.hundsun.ares.studio.core.rootConstructor&quot;&gt;
+      &lt;constructor
+            class=&quot;com.hundsun.ares.studio.jres.demo.TestConstructer&quot;
+            name=&quot;tt&quot;
+            rootType=&quot;com.hundsun.ares.studio.jres.demo.database&quot;&gt;
+      &lt;/constructor&gt;
+   &lt;/extension&gt;
+&lt;/pre&gt;
+上面声明了一个针对com.hundsun.ares.studio.jres.demo.database这个类型的Root的Constructor,其实现类为com.hundsun.ares.studio.jres.demo.TestConstructer，name为可选属性。
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiinfo"/>
+      </appInfo>
+      <documentation>
+         ]
+      </documentation>
+   </annotation>
+
+
+
+</schema>

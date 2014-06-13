@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+               <objectContribution
+            adaptable="false"
+            id="com.hundsun.ares.studio.jres.ui.excuteJS"
+            objectClass="com.hundsun.ares.studio.core.IARESResource">
+         <action
+               class="com.hundsun.ares.studio.jres.script.ui.action.ExcuteJSAction"
+               id="com.hundsun.ares.studio.jres.ui.action.excuteJS"
+               label="用户脚本执行">
+         </action>
+         <visibility>
+            <and>
+               <objectClass
+                     name="com.hundsun.ares.studio.core.IARESResource">
+               </objectClass>
+               <objectState
+                     name="type"
+                     value="js">
+               </objectState>
+            </and>
+         </visibility>
+      </objectContribution>
+   </extension>
+<extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.hundsun.ares.studio.jres.script.ui.action.ExcuteJSAction"
+            id="com.hundsun.ares.studio.jres.script.ui.comment"
+            name="脚本执行">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.hundsun.ares.studio.jres.script.ui.comment"
+            contextId="org.eclipse.ui.contexts.dialogAndWindow"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+R">
+      </key>
+   </extension>
+</plugin>

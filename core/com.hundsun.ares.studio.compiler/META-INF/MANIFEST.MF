@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Compiler
+Bundle-SymbolicName: com.hundsun.ares.studio.compiler;singleton:=true
+Bundle-Version: 1.1.0.qualifier
+Bundle-Activator: com.hundsun.ares.studio.jres.compiler.CompilerPlugin
+Bundle-Vendor: HUNDSUN
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.hundsun.ares.studio.core;bundle-version="1.0.0",
+ org.eclipse.core.resources,
+ com.hundsun.ares.studio.thirdpartylib;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.hundsun.ares.studio.jres.compiler

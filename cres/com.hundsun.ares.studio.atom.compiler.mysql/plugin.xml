@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.hundsun.ares.studio.engin.skeletonfactory">
+      <SkeletonFactory
+            class="com.hundsun.ares.studio.atom.compiler.mysql.skeleton.FunctionSkeletonFactory"
+            id="com.hundsun.ares.studio.atom.compiler.SkeletonFactory.atom.function.mysql"
+            type="atom.function.mysql">
+      </SkeletonFactory>
+      <SkeletonFactory
+            class="com.hundsun.ares.studio.atom.compiler.mysql.skeleton.ServiceSkeletonFactory"
+            id="com.hundsun.ares.studio.atom.compiler.SkeletonFactory.atom.service.mysql"
+            type="atom.service.mysql">
+      </SkeletonFactory>
+   </extension>
+
+</plugin>

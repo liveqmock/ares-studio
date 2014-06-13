@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="scriptpoxyfactory" name="scriptpoxyfactory" schema="schema/scriptpoxyfactory.exsd"/>
+   <extension-point id="userOptionControlTypeProvider" name="UserOptionControlTypeProvider" schema="schema/userOptionControlTypeProvider.exsd"/>
+      <extension
+         point="com.hundsun.ares.studio.core.aresResource">
+      <aresResource
+            converter="com.hundsun.ares.studio.jres.modelconvert.AnyModelConverter"
+            copyable="true"
+            deleteable="true"
+            icon="icons/user_script.png"
+            id="js"
+            info-class="com.hundsun.ares.studio.jres.core.AnyARESResourceInfo"
+            moveable="true"
+            name="脚本资源"
+            renameable="true">
+      </aresResource>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.rootToResTypeMaps">
+      <map
+            resTypes="js"
+            rootType="com.hundsun.ares.studio.jres.others">
+      </map>
+      <map
+            resTypes="js"
+            rootType="com.hundsun.ares.studio.jres.moduleroot.tools">
+      </map>
+   </extension>
+
+</plugin>

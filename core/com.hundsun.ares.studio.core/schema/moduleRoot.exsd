@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.studio.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.hundsun.ares.studio.core" id="moduleRoot" name="ModuleRoot"/>
+      </appInfo>
+      <documentation>
+         这个扩展点允许用户定义一种新的模块根的类型。
+&lt;p&gt;
+模块根的类型决定了其下可以存放哪些类型的资源(通过rootType2resTypeMap扩展点扩展)。
+&lt;/p&gt;
+&lt;p&gt;
+用户可以通过defaultRoot扩展点来指定创建某种类型的项目的时候，默认创建哪些类型的模块根。
+&lt;/p&gt;
+&lt;p&gt;
+还可以通过defaultResource扩展点来指定创建模块根的时候，需要创建哪些资源。
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="root" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="root">
+      <complexType>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  模块根的类型id
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  模块根的名字。
+&lt;p&gt;
+模块根有两种，一种是一个项目下仅有一个，这种模块根一般会有一个固定的名字，这种情况下，需要指定name这个属性。
+另外一种，是允许一个项目下有多个示例的模块根，这种情况不要指定name属性。
+&lt;/p&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="icon" type="string">
+            <annotation>
+               <documentation>
+                  图标。
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="resource"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="useDefaultModule" type="boolean">
+            <annotation>
+               <documentation>
+                  是否显示默认模块。
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="maxModuleLevel" type="string">
+            <annotation>
+               <documentation>
+                  这个模块根下的模块的最大层级。
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="deletable" type="boolean">
+            <annotation>
+               <documentation>
+                  是否可以删除的
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="renameable" type="boolean">
+            <annotation>
+               <documentation>
+                  是否支持重命名
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="order" type="string">
+            <annotation>
+               <documentation>
+                  排序序号，界面上排序的时候，小号在前面；
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="useProperty" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         下面的例子，指定了一个模块根的类型为&quot;com.hundsun.ares.studio.jres.demo.database&quot;，名字为“数据库”。
+&lt;pre&gt;
+   &lt;extension
+         point=&quot;com.hundsun.ares.studio.core.moduleRoot&quot;&gt;
+      &lt;root
+            icon=&quot;icons/database.gif&quot;
+            id=&quot;com.hundsun.ares.studio.jres.demo.database&quot;
+            name=&quot;数据库&quot;&gt;
+      &lt;/root&gt;
+   &lt;/extension&gt;
+&lt;/pre&gt;
+      </documentation>
+   </annotation>
+
+
+
+
+</schema>

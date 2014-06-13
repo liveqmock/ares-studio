@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Database
+Bundle-SymbolicName: com.hundsun.ares.studio.jres.basicdata.database;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.hundsun.ares.studio.jres.basicdata.database.Activator
+Bundle-Vendor: HUNDSUN
+Require-Bundle: org.eclipse.core.runtime,
+ com.hundsun.ares.studio.jres.basicdata.core;bundle-version="1.0.0",
+ com.hundsun.ares.studio.core;bundle-version="1.0.0",
+ com.hundsun.ares.studio.jres.database.core;bundle-version="1.1.0",
+ com.hundsun.ares.studio.jres.metadata.core;bundle-version="1.1.0",
+ org.eclipse.core.resources,
+ com.hundsun.ares.studio.reference;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

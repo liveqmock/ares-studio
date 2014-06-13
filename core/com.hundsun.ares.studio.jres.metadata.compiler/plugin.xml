@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.hundsun.ares.studio.compiler.compilerFactories">
+      <factory
+            category="jres.compiler.metadata"
+            class="com.hundsun.ares.studio.jres.metadata.complier.MetadataCompilerFactory"
+            description="元数据编译器"
+            id="jres.compiler.metadata.factory"
+            name="元数据编译器"
+            order="100"
+            priority="Normal"
+            types="defaultvalue,defaulttype,datatype,stdfield,dict,constant,errorno">
+      </factory>
+   </extension>
+
+</plugin>

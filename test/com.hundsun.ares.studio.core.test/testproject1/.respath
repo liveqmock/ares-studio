@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<respath>
+  <entry kind="src" type="test" path="testroot1"/>
+  <entry kind="lib" type="test" path="/testproject1/test.ares"/>
+  <entry kind="lib" type="test" path="D:\workspace\hs\framework\Sources\com.hundsun.ares.studio.core.test\testproject1\test.ares"/>
+</respath>

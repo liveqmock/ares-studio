@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.jres.database.core/src"
+    editDirectory="/com.hundsun.ares.studio.jres.database.ui/src" modelPluginID="com.hundsun.ares.studio.jres.database.core"
+    modelName="Database" editPluginClass="com.hundsun.ares.studio.jres.database.ui.DatabaseUI"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    publicConstructors="true" editPluginID="com.hundsun.ares.studio.jres.database.ui"
+    runtimeVersion="2.6" usedGenPackages="../../com.hundsun.ares.studio.core/model/ares.genmodel#//model">
+  <foreignModel>database.ecore</foreignModel>
+  <genPackages prefix="Database" basePackage="com.hundsun.ares.studio.jres.model"
+      disposableProviderFactory="true" ecorePackage="database.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="database.ecore#//key_type">
+      <genEnumLiterals ecoreEnumLiteral="database.ecore#//key_type/Primary"/>
+      <genEnumLiterals ecoreEnumLiteral="database.ecore#//key_type/Unique"/>
+      <genEnumLiterals ecoreEnumLiteral="database.ecore#//key_type/Foreign"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="database.ecore#//ColumnType">
+      <genEnumLiterals ecoreEnumLiteral="database.ecore#//ColumnType/STD_FIELD"/>
+      <genEnumLiterals ecoreEnumLiteral="database.ecore#//ColumnType/NON_STD_FIELD"/>
+    </genEnums>
+    <genClasses ecoreClass="database.ecore#//DBModuleCommonProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//DBModuleCommonProperty/database"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//DBModuleCommonProperty/supportDatabases"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//DatabaseResourceData"/>
+    <genClasses ecoreClass="database.ecore#//TableResourceData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference database.ecore#//TableResourceData/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference database.ecore#//TableResourceData/indexes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference database.ecore#//TableResourceData/keys"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//TableColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/chineseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/columnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/fieldName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/primaryKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/unique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/nullable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/defaultValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference database.ecore#//TableColumn/foreignkey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/mark"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/comments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableColumn/columnType"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//TableIndexColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndexColumn/columnName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndexColumn/ascending"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndexColumn/columnType"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//TableIndex">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndex/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndex/unique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndex/cluster"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference database.ecore#//TableIndex/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableIndex/mark"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//ViewResourceData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//ViewResourceData/sql"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//ViewResourceData/isHistory"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//DBGenContext"/>
+    <genClasses ecoreClass="database.ecore#//ForeignKey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//ForeignKey/tableName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//ForeignKey/fieldName"/>
+    </genClasses>
+    <genClasses ecoreClass="database.ecore#//TableKey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableKey/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableKey/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference database.ecore#//TableKey/foreignKey"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference database.ecore#//TableKey/columns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute database.ecore#//TableKey/mark"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

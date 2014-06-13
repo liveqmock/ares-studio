@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.logic.core/src"
+    editDirectory="/com.hundsun.ares.studio.logic.ui/src" modelPluginID="com.hundsun.ares.studio.logic.core"
+    modelName="Logic" editPluginClass="com.hundsun.ares.studio.logic.provider.LogicUI"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    publicConstructors="true" editPluginID="com.hundsun.ares.studio.logic.ui" runtimeVersion="2.6"
+    usedGenPackages="../../com.hundsun.ares.studio.core/model/ares.genmodel#//model ../../com.hundsun.ares.studio.atom.core/model/atom.genmodel#//atom ../../com.hundsun.ares.studio.biz.core/model/biz.genmodel#//biz">
+  <foreignModel>logic.ecore</foreignModel>
+  <genPackages prefix="Logic" basePackage="com.hundsun.ares.studio" disposableProviderFactory="true"
+      ecorePackage="logic.ecore#/">
+    <genClasses ecoreClass="logic.ecore#//LogicFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logic.ecore#//LogicFunction/isTransFunc"/>
+    </genClasses>
+    <genClasses ecoreClass="logic.ecore#//LogicService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logic.ecore#//LogicService/isCheckAccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute logic.ecore#//LogicService/timeOut"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

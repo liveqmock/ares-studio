@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.studio.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.hundsun.ares.studio.core" id="refResourcesProvider" name="Referenced Resources Provider"/>
+      </appInfo>
+      <documentation>
+         关联资源提供器,用户可以通过这个扩展点来扩展关联资源检查逻辑。当资源发生变化的时候，框架会通过这个扩展的信息计算哪些资源是关联的，需要重新检查错误状态。
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <element ref="provider" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="provider">
+      <complexType>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  名字，可选。
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  实现类
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":com.hundsun.ares.studio.core.validate.IRefResourceProvider"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+         <attribute name="resTypes" type="string" use="required">
+            <annotation>
+               <documentation>
+                  关联的资源类型，多个资源类型之间以英文逗号分隔.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         1.0
+      </documentation>
+   </annotation>
+
+
+
+
+
+</schema>

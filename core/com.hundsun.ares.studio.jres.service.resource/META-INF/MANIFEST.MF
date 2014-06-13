@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JRES Service Resource
+Bundle-SymbolicName: com.hundsun.ares.studio.jres.service.resource;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.hundsun.ares.studio.jres.service.resource.Activator
+Bundle-Vendor: HUNDSUN
+Require-Bundle: org.eclipse.core.runtime,
+ com.hundsun.ares.studio.core,
+ com.hundsun.ares.studio.jres.service.core;bundle-version="1.0.0",
+ com.hundsun.ares.studio.modelconvert;bundle-version="1.1.0",
+ com.hundsun.ares.studio.reference
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aar>
+	
+	<info>
+		<id>TestLib1</id>
+		<version>1.0.0</version>
+	</info>
+	
+	<respath>
+		<entry kind="src" type="test" path="libroot1"></entry>
+	</respath>
+	
+</aar>

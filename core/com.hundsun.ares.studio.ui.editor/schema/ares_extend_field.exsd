@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.devtool.v2.ui.editor" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.hundsun.ares.devtool.v2.ui.editor" id="ares_extend_field" name="ares_extend_field"/>
+      </appInfo>
+      <documentation>
+         允许用户通过该拓展点为ARES的表格和树编辑器添加自定义的列，用户需要知道该表格或树编辑器的ID
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="component" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="component">
+      <complexType>
+         <attribute name="component_id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  表格或树编辑器的ID
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="loader" type="string" use="required">
+            <annotation>
+               <documentation>
+                  拓展列内容提供器，必须实现接口com.hundsun.ares.devtool.v2.ui.page.IExtendFieldLoader，通过接口方法告诉框架拓展列的相关信息
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":com.hundsun.ares.devtool.v2.ui.page.IExtendFieldLoader"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         ARES1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         &lt;p&gt;
+&lt;pre&gt;
+&lt;extension
+   point=&quot;com.hundsun.ares.devtool.v2.ui.editor.ares_extend_field&quot;&gt;
+   &lt;component
+        component_id=&quot;com.hundsun.ares.devtool.v2.construction.table.control.TableFieldComponent&quot;
+        loader=&quot;com.hundsun.ares.devtool.v2.construction.table.hdt.page.HdtStdFieldExtendLoader&quot;&gt;
+   &lt;/component&gt;
+&lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         &lt;p&gt;Copyright: Copyright (c) 2009&lt;/p&gt;
+&lt;p&gt;Company: 恒生电子股份有限公司&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+</schema>

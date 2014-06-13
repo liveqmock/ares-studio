@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="ares_extend_model_serializer" name="ares_extend_model_serializer" schema="schema/ares_extend_model_serializer.exsd"/>
+   <extension-point id="aresResource" name="ARESResource" schema="schema/aresResource.exsd"/>
+   <extension-point id="moduleRoot" name="ModuleRoot" schema="schema/moduleRoot.exsd"/>
+   <extension-point id="module" name="Module" schema="schema/module.exsd"/>
+   <extension-point id="rootToResTypeMaps" name="模块根和资源类型映射关系" schema="schema/rootToResTypeMaps.exsd"/>
+   <extension-point id="aresproject" name="AresProject" schema="schema/aresproject.exsd"/>
+   <extension-point id="defaultModuleRoots" name="默认模块根" schema="schema/defaultModuleRoots.exsd"/>
+   <extension-point id="defaultResource" name="Default Resource" schema="schema/defaultResource.exsd"/>
+   <extension-point id="aresContextProvider" name="AresContextProvider" schema="schema/aresContextProvider.exsd"/>
+   <extension-point id="refResourcesProvider" name="Referenced Resources Provider" schema="schema/refResourcesProvider.exsd"/>
+   <extension-point id="resValidator" name="Resource Validator" schema="schema/resValidator.exsd"/>
+   <extension-point id="rootConstructor" name="模块根初始化器" schema="schema/rootConstructor.exsd"/>
+   <extension-point id="projectPropertyValidator" name="Project Property Validator" schema="schema/projectPropertyValidator.exsd"/>
+   <extension-point id="respathProvider" name="Res-path Provider" schema="schema/respathProvider.exsd"/>
+   <extension-point id="Res2RefTypeMapping" name="Res2RefTypeMapping" schema="schema/Res2RefTypeMapping.exsd"/>
+   <extension-point id="services" name="Service Register" schema="schema/services.exsd"/>
+   <extension-point id="extendPropertyProvider" name="ExtendPropertyProvider" schema="schema/extendPropertyProvider.exsd"/>
+   <extension-point id="refExtendedPropertyProvider" name="Ref ExtendedProperty Provider" schema="schema/refExtendedPropertyProvider.exsd"/>
+   <extension-point id="propertyHandlerFactory" name="PropertyHandlerFactory" schema="schema/propertyHandlerFactory.exsd"/>
+   
+   <extension
+         id="aresnature"
+         name="ARESNATURE"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.hundsun.ares.studio.internal.core.ARESProject">
+         </run>
+      </runtime>
+      <builder
+            id="com.hundsun.ares.studio.core.aresbuilder">
+      </builder>
+   </extension>
+   <extension
+         id="refnature"
+         name="引用"
+         point="org.eclipse.core.resources.natures">
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.hundsun.ares.studio.internal.core.ARESModulePropertyTester"
+            id="com.hundsun.ares.studio.core.aresModuleTester"
+            namespace="com.hundsun.ares.studio.core"
+            properties="isResTypeAllowed"
+            type="com.hundsun.ares.studio.core.IARESModule">
+      </propertyTester>
+      <propertyTester
+            class="com.hundsun.ares.studio.internal.core.ModuleRootPropertyTester"
+            id="com.hundsun.ares.studio.core.rootPropertyTester"
+            namespace="com.hundsun.ares.studio.core"
+            properties="isResTypeAllowed,maxModuleLevel,rootType"
+            type="com.hundsun.ares.studio.core.IARESModuleRoot">
+      </propertyTester>
+      <propertyTester
+            class="com.hundsun.ares.studio.internal.core.FilePropertyTester"
+            id="com.hundsun.ares.studio.core.aresfileTester"
+            namespace="com.hundsun.ares.studio.core"
+            properties="isOnResPath"
+            type="org.eclipse.core.resources.IFile">
+      </propertyTester>
+      <propertyTester
+            class="com.hundsun.ares.studio.core.AresResourcePropertyTester"
+            id="com.hundsun.ares.studio.core.aresResourceTester"
+            namespace="com.hundsun.ares.studio.core"
+            properties="type"
+            type="com.hundsun.ares.studio.core.IARESResource">
+      </propertyTester>
+      <propertyTester
+            class="com.hundsun.ares.studio.core.AresElementPropertyTester"
+            id="com.hundsun.ares.studio.core.aresElementTester"
+            namespace="com.hundsun.ares.studio.core"
+            properties="name,projectNature"
+            type="com.hundsun.ares.studio.core.IARESElement">
+      </propertyTester>
+   </extension>
+   <extension
+         id="aresbuilder"
+         name="AresStudioBuilder"
+         point="org.eclipse.core.resources.builders">
+      <builder>
+         <run
+               class="com.hundsun.ares.studio.core.builder.AresProjectBuilder">
+         </run></builder>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.aresContextProvider">
+      <provider
+            class="com.hundsun.ares.studio.core.validate.DefaultContextProvider"
+            id="default">
+      </provider>
+   </extension>
+   <extension
+         id="aresproblemmarker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.aresResource">
+      <aresResource
+            converter="com.hundsun.ares.studio.core.model.ModulePropertyConverter"
+            copyable="false"
+            deleteable="false"
+            filename="module.xml"
+            icon="icons/obj16/module_pro.gif"
+            id="module.xml"
+            info-class="com.hundsun.ares.studio.core.model.ModuleProperty"
+            moveable="false"
+            name="属性"
+            renameable="false">
+      </aresResource>
+      <aresResource
+            converter="com.hundsun.ares.studio.core.model.ModuleRootConverter"
+            copyable="false"
+            deleteable="false"
+            filename="root.xml"
+            icon="icons/obj16/module_pro.gif"
+            id="root.xml"
+            info-class="com.hundsun.ares.studio.core.model.ModuleRootProperty"
+            moveable="false"
+            name="属性"
+            renameable="false">
+      </aresResource>
+   </extension>
+
+   
+   <extension
+         id="aresMarkerSuper"
+         name="资源错误"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+      <attribute
+            name="aresResourceId">
+      </attribute>
+   </extension>
+   <extension
+         id="service_error"
+         name="服务错误"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="com.hundsun.ares.studio.core.aresMarkerSuper">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.resValidator">
+      <validator
+            class="com.hundsun.ares.studio.core.validate.ModulePropertyValidator"
+            id="com.hundsun.ares.studio.core.moduleprovalidator"
+            resTypes="module.xml">
+      </validator>
+   </extension>
+   <extension
+         id="aresbookmarker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.bookmark">
+      </super>
+      <persistent
+            value="false">
+      </persistent>
+   </extension>
+   <extension
+         id="aresreferlibproblemmarker"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="com.hundsun.ares.studio.core.aresproblemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   <!--extension
+         point="com.hundsun.ares.studio.core.projectPropertyValidator">
+      <validator
+            class="com.hundsun.ares.studio.core.DefaultProjectPropertyValidator"
+            id="com.hundsun.ares.studio.core.commonvalidator"
+            nature="com.hundsun.ares.studio.core.aresnature"
+            projectTypeId="com.hundsun.ares.studio.core.validator1">
+      </validator>
+   </extension-->
+   
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.core.model.BasicResourceInfo"
+            class="com.hundsun.ares.studio.internal.core.BasicResInfoAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.core.model.ICommonModel">
+         </adapter>
+      </factory>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ares -->
+      <package
+            uri="http://www.hundsun.com/ares/studio/core/1.0.0"
+            class="com.hundsun.ares.studio.core.model.CorePackage"
+            genModel="model/ares.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.propertyHandlerFactory">
+      <factory
+            class="com.hundsun.ares.studio.core.excel.handler.CorePropertyHandlderFactoryProvider"
+            id="com.hundsun.ares.studio.core.corePropertyHandlderFactoryProvider">
+      </factory>
+   </extension>
+
+</plugin>

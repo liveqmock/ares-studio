@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.nebula.cwt_0.9.0.200912251003.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.nebula.widgets.cdatetime_0.14.0.200912251003.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.nebula.widgets.formattedtext_1.0.0.200912251057.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.eclipse.nebula.widgets.grid_1.0.0.200912101718.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="com.hundsun.ares.studio.core.moduleRoot">
+      <root
+            deletable="true"
+            icon="icons/tools.png"
+            id="com.hundsun.ares.studio.jres.moduleroot.tools"
+            name="工具资源"
+            order="1000"
+            useDefaultModule="false">
+      </root>
+   </extension>
+   
+   <extension
+         point="com.hundsun.ares.studio.core.aresResource">
+      <aresResource
+            converter="com.hundsun.ares.studio.jres.modelconvert.AnyModelConverter"
+            copyable="true"
+            deleteable="true"
+            icon="icons/user_script.png"
+            id="js"
+            info-class="com.hundsun.ares.studio.jres.core.AnyARESResourceInfo"
+            moveable="true"
+            name="脚本资源"
+            renameable="true">
+      </aresResource>
+      <aresResource
+            converter="com.hundsun.ares.studio.jres.modelconvert.AnyModelConverter"
+            copyable="true"
+            deleteable="true"
+            icon="icons/xml.gif"
+            id="xml"
+            info-class="com.hundsun.ares.studio.jres.core.AnyARESResourceInfo"
+            moveable="true"
+            name="用户选项配置资源"
+            renameable="true">
+      </aresResource>
+   </extension>
+   
+      <aresResource
+            converter="com.hundsun.ares.studio.jres.internal.FileNameModelConverter"
+            copyable="true"
+            deleteable="true"
+            id="xml"
+            info-class="java.lang.String"
+            moveable="true"
+            name="XML"
+            renameable="true">
+      </aresResource>
+</plugin>

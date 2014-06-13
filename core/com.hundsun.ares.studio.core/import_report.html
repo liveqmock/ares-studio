@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+td{
+	max-width: 700px;
+}
+</style>
+
+<title>导入报告</title>
+</head>
+<body>
+	<div id="overview">
+		<p class="lead"><div><strong>{{overview}}</strong></div></p>
+	</div>
+ 	<small>
+ 			<div id="err_infos">
+		<a data-toggle="collapse" href="#collapseOne">点击查看错误和警告信息({{err_info_overview}})</a>
+		<div id="collapseOne" class="accordion-body collapse">
+			<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>#</th><th>级别</th><th>错误信息</th><th colspan="2">参考位置</th>
+				</tr>
+			</thead>
+			{{err_info_body}}
+		</table>
+		</div>
+	</div>
+	
+	<div id="details">
+		
+		<a data-toggle="collapse" href="#reslist">点击查看资源列表（仅列出覆盖或出错的资源）</a>
+		<div id="reslist" class="accordion-body collapse">
+			<table class="table table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>#</th><th>对象号</th><th>英文名</th><th>中文名</th><th>处理方式</th>
+				</tr>
+			</thead>
+			{{reslist}}
+		</table>
+		</div>
+			
+		</div>
+	</div>
+ 	</small>
+	
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>

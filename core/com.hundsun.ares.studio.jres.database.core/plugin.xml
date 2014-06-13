@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <!--extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http://www.hundsun.com/ares/studio/jres/database/1.0.0"
+            class="com.hundsun.ares.studio.jres.model.database.provider.DatabaseItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension-->
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/jres/database/1.0.0"
+            class="com.hundsun.ares.studio.jres.model.database.DatabasePackage"
+            genModel="model/database.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.jres.database.constant.IDatabaseRefType"
+            resType="com.hundsun.ares.studio.jres.database.constant.IDatabaseResType">
+      </mapping>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.services">
+      <service
+            factory="com.hundsun.ares.studio.jres.database.internal.service.DatabaseServiceFactory"
+            id="com.hundsun.ares.studio.jres.database.core.dataservice"
+            type="com.hundsun.ares.studio.jres.database.service.IDatabaseService">
+      </service>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.jres.model.metadata.StandardField"
+            class="com.hundsun.ares.studio.jres.database.core.adapters.MetadataAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.jres.model.database.TableColumn">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="com.hundsun.ares.studio.jres.model.database.TableColumn"
+            class="com.hundsun.ares.studio.jres.database.core.TableColumn2StdFieldAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.jres.model.metadata.StandardField">
+         </adapter>
+      </factory>
+   </extension>
+    <!--移植oracle中注册信息 -->
+    <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.hundsun.com/ares/studio/jres/database/oracle/1.0.0"
+            class="com.hundsun.ares.studio.jres.model.database.oracle.OraclePackage"
+            genModel="model/oracle.genmodel"/>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.jres.database.oracle.constant.IOracleRefType"
+            resType="com.hundsun.ares.studio.jres.database.oracle.constant.IOracleResType">
+      </mapping>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.services">
+      <service
+            factory="com.hundsun.ares.studio.jres.database.oracle.internal.service.OracleServiceFactory"
+            id="com.hundsun.ares.studio.jres.database.oracle.core.dataservice"
+            type="com.hundsun.ares.studio.jres.database.oracle.service.IOracleDBService">
+      </service>
+   </extension>
+</plugin>

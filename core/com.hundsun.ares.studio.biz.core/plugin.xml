@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension-point id="objectRefTypes" name="ObjectReferenceTypes" schema="schema/objectRefTypes.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated biz -->
+      <package
+            uri="http://www.hundsun.com/ares/studio/biz/1.0.0"
+            class="com.hundsun.ares.studio.biz.BizPackage"
+            genModel="model/biz.genmodel"/>
+   </extension>
+
+   <extension
+         point="com.hundsun.ares.studio.core.Res2RefTypeMapping">
+      <mapping
+            refType="com.hundsun.ares.studio.biz.constants.IBizRefType"
+            resType="com.hundsun.ares.studio.biz.constants.IBizResType">
+      </mapping>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.reference.ReferenceInfoProviders">
+      <ReferenceInfoProvider
+            class="com.hundsun.ares.studio.biz.core.ReferenceInfoProvider1"
+            id="com.hundsun.ares.studio.biz.core.ReferenceInfoProvider1"
+            type="com.hundsun.ares.studio.biz.core.ReferenceInfoProvider1">
+      </ReferenceInfoProvider>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.jres.script.scriptpoxyfactory">
+      <PoxyFactory
+            class="com.hundsun.ares.studio.biz.script.ObjScriptPoxyFactory"
+            id="jres.obj">
+      </PoxyFactory>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.hundsun.ares.studio.jres.model.metadata.StandardField"
+            class="com.hundsun.ares.studio.biz.adapters.StandardFieldAdapterFactory">
+         <adapter
+               type="com.hundsun.ares.studio.biz.Parameter">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.refExtendedPropertyProvider">
+      <provider
+            class="com.hundsun.ares.studio.biz.ParameterUserExtendPropertyProvider"
+            id="parameter.ext">
+      </provider>
+   </extension>
+   <extension
+         point="com.hundsun.ares.studio.core.propertyHandlerFactory">
+      <factory
+            class="com.hundsun.ares.studio.biz.core.BizPropertyHandlerFactoryProvider"
+            id="com.hundsun.ares.studio.biz.core.bizpropertyHandlerFactory">
+      </factory>
+   </extension>
+</plugin>

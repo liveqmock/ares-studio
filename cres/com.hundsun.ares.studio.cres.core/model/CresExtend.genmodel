@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.hundsun.ares.studio.cres.core/src"
+    editDirectory="/com.hundsun.ares.studio.cres.ui/src" modelPluginID="com.hundsun.ares.studio.cres.core"
+    modelName="CresExtend" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false" editPluginID="com.hundsun.ares.studio.cres.ui" interfaceNamePattern="">
+  <foreignModel>CresExtend.ecore</foreignModel>
+  <genPackages prefix="Cresextend" basePackage="com.hundsun.ares.studio.cres.extend"
+      disposableProviderFactory="true" ecorePackage="CresExtend.ecore#/">
+    <genClasses ecoreClass="CresExtend.ecore#//MoudleDepend">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//MoudleDepend/modulePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//MoudleDepend/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CresExtend.ecore#//CresMoudleExtendProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CresExtend.ecore#//CresMoudleExtendProperty/depends"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresMoudleExtendProperty/subSysID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresMoudleExtendProperty/dataBaseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresMoudleExtendProperty/dataBaseConn"/>
+    </genClasses>
+    <genClasses ecoreClass="CresExtend.ecore#//CresProjectExtendProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/cName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/shortCName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/manager"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/developer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/user"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/relation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/writer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//CresProjectExtendProperty/headFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CresExtend.ecore#//CresProjectExtendProperty/procDefine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CresExtend.ecore#//CresProjectExtendProperty/gccDefine"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CresExtend.ecore#//CresProjectExtendProperty/mvcDefine"/>
+    </genClasses>
+    <genClasses ecoreClass="CresExtend.ecore#//ProcDefine"/>
+    <genClasses ecoreClass="CresExtend.ecore#//GccDefine"/>
+    <genClasses ecoreClass="CresExtend.ecore#//MvcDefine"/>
+    <genClasses ecoreClass="CresExtend.ecore#//FileDefine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//FileDefine/isUsed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//FileDefine/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//FileDefine/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CresExtend.ecore#//FileDefine/note"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

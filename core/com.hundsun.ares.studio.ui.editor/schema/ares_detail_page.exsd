@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.hundsun.ares.devtool.v2.ui.editor" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="com.hundsun.ares.devtool.v2.ui.editor" id="ares_detail_page" name="ares_detail_page"/>
+      </appinfo>
+      <documentation>
+         允许用户对ARES的编辑器进行页面拓展，用户通过拓展点的配置，实现界面的不同展现和对内存模型的绑定
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appinfo>
+            <meta.element />
+         </appinfo>
+      </annotation>
+      <complexType>
+         <sequence>
+            <element ref="pageItem"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="sectionForControl">
+      <annotation>
+         <documentation>
+            一个由若干个控件填充的section，用户需要自己配置或者实现section的内容
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <choice>
+               <element ref="Combo"/>
+               <element ref="Text"/>
+               <element ref="Control"/>
+            </choice>
+         </sequence>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  section的唯一标识，用户可以通过该标识取得section实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  section的标题
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="expand" type="boolean">
+            <annotation>
+               <documentation>
+                  section在编辑器初始化的时候是否自动展开
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="col_num" type="string" use="default" value="4">
+            <annotation>
+               <documentation>
+                  每行的控件数
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="sectionForComponent">
+      <annotation>
+         <documentation>
+            由一个component填充的section，一般为table或者tree，用户需要自己提供component的实现类
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  section的唯一标识，用户可以通过该标识取得section实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  section的标题
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="expand" type="boolean">
+            <annotation>
+               <documentation>
+                  section在编辑器初始化的时候是否自动展开
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  component的实现类
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="improve.control.EditorComponent:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="bind_field" type="string">
+            <annotation>
+               <documentation>
+                  component绑定的模型，必须是一个list，用户对component的修改会同步改变该模型
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="Text">
+      <annotation>
+         <documentation>
+            一个text控件
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="1">
+            <element ref="gridData"/>
+         </sequence>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  text控件的唯一标识，可通过该标识获得控件实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string">
+            <annotation>
+               <documentation>
+                  text前面标签的显示字段
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="bind_field" type="string">
+            <annotation>
+               <documentation>
+                  text控件绑定的模型，text内容修改的时候会自动调用模型的get和set方法
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="Combo">
+      <complexType>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  combo控件的唯一标识，可通过该标识获得控件实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="label" type="string">
+            <annotation>
+               <documentation>
+                  combo前面标签的显示字段
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="readonly" type="boolean" use="default" value="true">
+            <annotation>
+               <documentation>
+                  combo控件是否是只读的
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="bind_field" type="string">
+            <annotation>
+               <documentation>
+                  combo控件绑定的模型，combo内容修改的时候会自动调用模型的get和set方法
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="items" type="string">
+            <annotation>
+               <documentation>
+                  combo控件初始化时可选择的字段
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="pageItem">
+      <annotation>
+         <documentation>
+            描述用户拓展的一个页面
+         </documentation>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="unbounded">
+            <choice>
+               <element ref="sectionForComponent"/>
+               <element ref="sectionForControl"/>
+            </choice>
+         </sequence>
+         <attribute name="pageid" type="string">
+            <annotation>
+               <documentation>
+                  page 的唯一标识，程序中可通过该标识获得页面实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  页面名称，界面上表现为编辑器页面TAB页的标题
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="editor_id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  对应编辑器的拓展点ID，指定该页面要配置到那个编辑器上
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="Control">
+      <annotation>
+         <documentation>
+            用户自己实现的控件
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  控件的唯一标识，可通过该标识获得控件实例
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="bind_field" type="string">
+            <annotation>
+               <documentation>
+                  控件绑定的模型，控件内容修改的时候会自动调用模型的get和set方法
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  控件的提供器，继承自PageExtendPointControlProvider
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="imporve.extendpoint.PageExtendPointControlProvider:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="showname" type="string">
+            <annotation>
+               <documentation>
+                  控件的展现字段，用户在创建控件时可能有用
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="gridData">
+      <complexType>
+         <attribute name="horizontalAlignment" use="default" value="SWT.FILL">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="SWT.FILL">
+                  </enumeration>
+                  <enumeration value="SWT.BEGINNING">
+                  </enumeration>
+                  <enumeration value="SWT.END">
+                  </enumeration>
+                  <enumeration value="SWT.CENTER">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="verticalAlignment" use="default" value="SWT.FILL">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="SWT.FILL">
+                  </enumeration>
+                  <enumeration value="SWT.BEGINNING">
+                  </enumeration>
+                  <enumeration value="SWT.END">
+                  </enumeration>
+                  <enumeration value="SWT.CENTER">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="grabExcessHorizontalSpace" type="boolean" use="default" value="true">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="grabExcessVerticalSpace" type="boolean" use="default" value="true">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="horizontalSpan" type="string" use="default" value="1">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="verticalSpan" type="string" use="default" value="1">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="widthHint" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="heightHint" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         ARES1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         The following is an example 
+of an hsobject editor page definition: 
+&lt;p&gt;
+&lt;pre&gt;
+  &lt;extension
+         point=&quot;com.hundsun.ares.devtool.v2.ui.editor.ares_detail_page&quot;&gt;
+      &lt;pageItem
+            editor_id=&quot;com.hundsun.ares.devtool.v2.ui.editor.ObjectEditor3&quot;
+            name=&quot;测试详细&quot;
+            pageid=&quot;page2&quot;&gt;
+         &lt;sectionForControl
+               expand=&quot;true&quot;
+               id=&quot;basic&quot;
+               name=&quot;基本信息&quot;&gt;
+            &lt;Text
+                  bind_field=&quot;name&quot;
+                  id=&quot;name&quot;
+                  label=&quot;名称&quot;&gt;
+            &lt;/Text&gt;
+            &lt;Combo
+                  bind_field=&quot;scope&quot;
+                  id=&quot;scope&quot;
+                  items=&quot; ,prototype,request,singleton,session&quot;
+                  label=&quot;生命周期&quot;
+                  readonly=&quot;true&quot;&gt;
+            &lt;/Combo&gt;
+            &lt;Control
+                  bind_field=&quot;className&quot;
+                  class=&quot;imporve.extendpoint.TextControlProvider&quot;
+                  id=&quot;control&quot;
+                  showname=&quot;类&quot;&gt;
+            &lt;/Control&gt;
+         &lt;/sectionForControl&gt;
+         &lt;sectionForComponent
+               bind_field=&quot;attributes&quot;
+               class=&quot;objectui.HSObjectAttributeComponent&quot;
+               expand=&quot;true&quot;
+               id=&quot;attr&quot;
+               name=&quot;属性&quot;&gt;
+         &lt;/sectionForComponent&gt;
+         &lt;sectionForControl
+               expand=&quot;false&quot;
+               id=&quot;empty&quot;
+               name=&quot;空&quot;&gt;
+         &lt;/sectionForControl&gt;
+      &lt;/pageItem&gt;
+   &lt;/extension&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;getExtendsPointPages().get(pageID)
+&lt;p&gt;AbstractHSFormEditor中通过该方法获得创建的页面实例
+&lt;p&gt;getHelper().getItems().get(objectID)
+&lt;p&gt;ExtendPointPageHelper中通过该方法获得控件实例，如通过拓展点配置出来的section，text，combo等等
+      </documentation>
+   </annotation>
+
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         &lt;p&gt;Copyright: Copyright (c) 2009&lt;/p&gt;
+&lt;p&gt;Company: 恒生电子股份有限公司&lt;/p&gt;
+      </documentation>
+   </annotation>
+
+</schema>

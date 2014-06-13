@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="reference"
+    nsURI="http://www.hundsun.com/ares/studio/jres/reference/1.0.0" nsPrefix="reference">
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceTable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projects" upperBound="-1"
+        eType="#//ProjectToReferencesMapEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectReferenceCollection">
+    <eOperations name="getReferenceInfos" upperBound="-1" eType="#//ReferenceInfo">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getReferenceInfos" upperBound="-1" eType="#//ReferenceInfo">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getReferenceInfos" upperBound="-1" eType="#//ReferenceInfo">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="updateOnlyResourceOnlyRefTypecache">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="referenceInfos" upperBound="-1" eType="#//ReferenceInfo"/>
+    </eOperations>
+    <eOperations name="getFirstReferenceInfos" upperBound="-1" eType="#//ReferenceInfo">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="references" upperBound="-1"
+        eType="#//ReferenceMapEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectToReferencesMapEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//IARESProject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//ProjectReferenceCollection"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceMapEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
+        eType="#//ReferenceInfo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceInfo">
+    <eOperations name="getObject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" eType="#//IARESResource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectProvider" eType="#//IObjectProvider"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationTable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projects" upperBound="-1"
+        eType="#//ProjectToRelationsMapEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectToRelationsMapEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//IARESProject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//ProjectRelationCollection"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProjectRelationCollection">
+    <eOperations name="getRelationInfos" upperBound="-1" eType="#//RelationInfo">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getRelationInfos" upperBound="-1" eType="#//RelationInfo">
+      <eParameters name="refType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="refName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getRelations" eType="#//Relations"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationInfo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostResource" eType="#//IARESResource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usedRefName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usedRefNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="usedRefType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="IARESProject" instanceClassName="com.hundsun.ares.studio.core.IARESProject"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IARESResource" instanceClassName="com.hundsun.ares.studio.core.IARESResource"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IObjectProvider" instanceClassName="com.hundsun.ares.studio.reference.IObjectProvider"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IARESBundle" instanceClassName="com.hundsun.ares.studio.core.IARESBundle"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Relations" instanceClassName="com.hundsun.ares.studio.model.reference.IRelations"/>
+</ecore:EPackage>

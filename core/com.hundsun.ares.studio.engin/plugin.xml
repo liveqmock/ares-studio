@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="macrotokenhandlerfactory" name="UFT macrotokenhandlerfactory" schema="schema/com.hundsun.ares.studio.engin.macrotokenhandlerfactory.exsd"/>
+   <extension-point id="skeletonfactory" name="UFT skeletonfactory" schema="schema/com.hundsun.ares.studio.engin.skeletonfactory.exsd"/>
+
+</plugin>

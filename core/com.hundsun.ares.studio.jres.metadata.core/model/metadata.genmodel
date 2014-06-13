@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&lt;p>Copyright: Copyright (c) 2011&lt;/p>&#xD;&#xA;&lt;p>Company: 恒生电子股份有限公司&lt;/p>"
+    modelDirectory="/com.hundsun.ares.studio.jres.metadata.core/src" editDirectory="/com.hundsun.ares.studio.jres.metadata.ui/src"
+    modelPluginID="com.hundsun.ares.studio.jres.metadata.core" redirection="" modelName="Metadata"
+    editPluginClass="com.hundsun.ares.studio.jres.metadata.ui.MetadataUI" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" publicConstructors="true" editPluginID="com.hundsun.ares.studio.jres.metadata.ui"
+    runtimeVersion="2.6" language="" usedGenPackages="../../com.hundsun.ares.studio.core/model/ares.genmodel#//model"
+    interfaceNamePattern="">
+  <foreignModel>metadata.ecore</foreignModel>
+  <genPackages prefix="Metadata" basePackage="com.hundsun.ares.studio.jres.model"
+      disposableProviderFactory="true" dataTypeConverters="true" contentTypeIdentifier=""
+      fileExtensions="defaultvalue,constant,datatype,defaulttype,dict,errorno,stdfield,menu"
+      ecorePackage="metadata.ecore#/">
+    <genClasses ecoreClass="metadata.ecore#//MDModuleCommonProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//MDModuleCommonProperty/useRefFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/outPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/functionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/uixml"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Operation/autobuild"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="metadata.ecore#//MetadataResourceData">
+      <genTypeParameters ecoreTypeParameter="metadata.ecore#//MetadataResourceData/T"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MetadataResourceData/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MetadataResourceData/root"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MetadataResourceData/items"/>
+      <genOperations ecoreOperation="metadata.ecore#//MetadataResourceData/find">
+        <genParameters ecoreParameter="metadata.ecore#//MetadataResourceData/find/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//NamedElement/chineseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//NamedElement/description"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//MetadataItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//MetadataItem/refId"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference metadata.ecore#//MetadataItem/parent"/>
+      <genOperations ecoreOperation="metadata.ecore#//MetadataItem/getCategories"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//MetadataCategory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MetadataCategory/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference metadata.ecore#//MetadataCategory/items"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference metadata.ecore#//MetadataCategory/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//TypeDefaultValueList"/>
+    <genClasses ecoreClass="metadata.ecore#//TypeDefaultValue">
+      <genOperations ecoreOperation="metadata.ecore#//TypeDefaultValue/getValue">
+        <genParameters ecoreParameter="metadata.ecore#//TypeDefaultValue/getValue/typeId"/>
+      </genOperations>
+      <genOperations ecoreOperation="metadata.ecore#//TypeDefaultValue/setValue">
+        <genParameters ecoreParameter="metadata.ecore#//TypeDefaultValue/setValue/typeId"/>
+        <genParameters ecoreParameter="metadata.ecore#//TypeDefaultValue/setValue/value"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//StandardDataTypeList"/>
+    <genClasses ecoreClass="metadata.ecore#//StandardDataType">
+      <genOperations ecoreOperation="metadata.ecore#//StandardDataType/getValue">
+        <genParameters ecoreParameter="metadata.ecore#//StandardDataType/getValue/typeId"/>
+      </genOperations>
+      <genOperations ecoreOperation="metadata.ecore#//StandardDataType/setValue">
+        <genParameters ecoreParameter="metadata.ecore#//StandardDataType/setValue/typeId"/>
+        <genParameters ecoreParameter="metadata.ecore#//StandardDataType/setValue/value"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//BusinessDataTypeList"/>
+    <genClasses ecoreClass="metadata.ecore#//BusinessDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//BusinessDataType/stdType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//BusinessDataType/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//BusinessDataType/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//BusinessDataType/defaultValue"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//StandardFieldList"/>
+    <genClasses ecoreClass="metadata.ecore#//StandardField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//StandardField/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//StandardField/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//StandardField/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//StandardField/dictionaryType"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//DictionaryList"/>
+    <genClasses ecoreClass="metadata.ecore#//DictionaryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//DictionaryType/items"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//DictionaryItem">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference metadata.ecore#//DictionaryItem/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//DictionaryItem/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//DictionaryItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//DictionaryItem/chineseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//DictionaryItem/constantName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//DictionaryItem/description"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//ConstantList"/>
+    <genClasses ecoreClass="metadata.ecore#//ConstantItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ConstantItem/dataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ConstantItem/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ConstantItem/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ConstantItem/precision"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//ErrorNoList"/>
+    <genClasses ecoreClass="metadata.ecore#//ErrorNoItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ErrorNoItem/no"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ErrorNoItem/message"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ErrorNoItem/constantName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//ErrorNoItem/level"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//GeneralDataConfigList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//GeneralDataConfigList/items"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//GeneralDataConfigItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//GeneralDataConfigItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//GeneralDataConfigItem/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//GeneralDataConfigItem/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//GeneralDataConfigItem/chineseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//GeneralDataConfigItem/discription"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//MenuItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//MenuItem/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//MenuItem/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MenuItem/subItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MenuItem/functionProxys"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//FunctionProxy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//FunctionProxy/funCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//FunctionProxy/description"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Function/subTransCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metadata.ecore#//Function/servID"/>
+    </genClasses>
+    <genClasses ecoreClass="metadata.ecore#//MenuList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metadata.ecore#//MenuList/functions"/>
+    </genClasses>
+    <nestedGenPackages prefix="Decrypt" basePackage="com.hundsun.ares.studio.jres.model.metadata"
+        disposableProviderFactory="true" ecorePackage="metadata.ecore#//decrypt">
+      <genDataTypes ecoreDataType="metadata.ecore#//decrypt/IARESResource"/>
+      <genDataTypes ecoreDataType="metadata.ecore#//decrypt/Pair">
+        <genTypeParameters ecoreTypeParameter="metadata.ecore#//decrypt/Pair/F"/>
+        <genTypeParameters ecoreTypeParameter="metadata.ecore#//decrypt/Pair/S"/>
+      </genDataTypes>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/ITypeDefaultValue"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IStandardDataType"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IBusinessDataType"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IStandardField"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IDictionaryType"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IDictionaryItem"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IErrorNoItem"/>
+      <genClasses image="false" ecoreClass="metadata.ecore#//decrypt/IUserConstantItem"/>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeMetadataItem">
+        <genTypeParameters ecoreTypeParameter="metadata.ecore#//decrypt/DeMetadataItem/T"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getName"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getChineseName"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getDescription"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getDataMapValue">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeMetadataItem/getDataMapValue/key"/>
+        </genOperations>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getData2MapValue">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeMetadataItem/getData2MapValue/key"/>
+        </genOperations>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getResolvedItem"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getProxyItem"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getResource"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getDataMap"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeMetadataItem/getData2Map"/>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeTypeDefaultValue">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeTypeDefaultValue/getValue">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeTypeDefaultValue/getValue/typeId"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeStandardDataType">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardDataType/getValue">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeStandardDataType/getValue/typeId"/>
+        </genOperations>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardDataType/getRealType">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeStandardDataType/getRealType/typeId"/>
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeStandardDataType/getRealType/length"/>
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeStandardDataType/getRealType/precision"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeBusinessDataType">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getDefaultValue"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getDefaultValueId"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getLength"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getPrecision"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getStdType"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getStdTypeId"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getRealDefaultValue">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeBusinessDataType/getRealDefaultValue/typeId"/>
+        </genOperations>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeBusinessDataType/getRealType">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeBusinessDataType/getRealType/typeId"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeStandardField">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getDataType"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getDataTypeId"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getDictionaryType"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getDictionaryTypeId"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getLength"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getPrecision"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeStandardField/getRealType">
+          <genParameters ecoreParameter="metadata.ecore#//decrypt/DeStandardField/getRealType/typeId"/>
+        </genOperations>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeDictionaryType">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryType/getItems"/>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeDictionaryItem">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryItem/getParent"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryItem/getValue"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryItem/getName"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryItem/getChineseName"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryItem/getConstantName"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeDictionaryItem/getDescription"/>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeConstantItem">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeConstantItem/getDataType"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeConstantItem/getDataTypeId"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeConstantItem/getLength"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeConstantItem/getPrecision"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeConstantItem/getValue"/>
+      </genClasses>
+      <genClasses ecoreClass="metadata.ecore#//decrypt/DeErrorNoItem">
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeErrorNoItem/getConstantName"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeErrorNoItem/getLevel"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeErrorNoItem/getMessage"/>
+        <genOperations ecoreOperation="metadata.ecore#//decrypt/DeErrorNoItem/getNo"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

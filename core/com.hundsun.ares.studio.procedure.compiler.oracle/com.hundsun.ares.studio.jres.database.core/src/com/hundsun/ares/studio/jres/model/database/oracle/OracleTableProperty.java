@@ -1,0 +1,89 @@
+/**
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package com.hundsun.ares.studio.jres.model.database.oracle;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Table Property</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link com.hundsun.ares.studio.jres.model.database.oracle.OracleTableProperty#getSpace <em>Space</em>}</li>
+ *   <li>{@link com.hundsun.ares.studio.jres.model.database.oracle.OracleTableProperty#getTabletype <em>Tabletype</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see com.hundsun.ares.studio.jres.model.database.oracle.OraclePackage#getOracleTableProperty()
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='space indexSpace'"
+ * @generated
+ */
+public interface OracleTableProperty extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Space</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Space</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 需要衍生出索引表空间信息
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Space</em>' attribute.
+	 * @see #setSpace(String)
+	 * @see com.hundsun.ares.studio.jres.model.database.oracle.OraclePackage#getOracleTableProperty_Space()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSpace();
+
+	/**
+	 * Sets the value of the '{@link com.hundsun.ares.studio.jres.model.database.oracle.OracleTableProperty#getSpace <em>Space</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Space</em>' attribute.
+	 * @see #getSpace()
+	 * @generated
+	 */
+	void setSpace(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Tabletype</b></em>' attribute.
+	 * The default value is <code>"COMMON"</code>.
+	 * The literals are from the enumeration {@link com.hundsun.ares.studio.jres.model.database.oracle.table_type}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tabletype</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tabletype</em>' attribute.
+	 * @see com.hundsun.ares.studio.jres.model.database.oracle.table_type
+	 * @see #setTabletype(table_type)
+	 * @see com.hundsun.ares.studio.jres.model.database.oracle.OraclePackage#getOracleTableProperty_Tabletype()
+	 * @model default="COMMON"
+	 * @generated
+	 */
+	table_type getTabletype();
+
+	/**
+	 * Sets the value of the '{@link com.hundsun.ares.studio.jres.model.database.oracle.OracleTableProperty#getTabletype <em>Tabletype</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tabletype</em>' attribute.
+	 * @see com.hundsun.ares.studio.jres.model.database.oracle.table_type
+	 * @see #getTabletype()
+	 * @generated
+	 */
+	void setTabletype(table_type value);
+
+} // OracleTableProperty

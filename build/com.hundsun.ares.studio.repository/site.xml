@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.hundsun.ares.studio.framework.libs.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.framework.libs.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN ARES Framework"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.framework.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.framework.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN ARES Framework"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.metadata.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.metadata.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.database.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.database.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.biz.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.biz.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.script.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.script.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.basicdata.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.basicdata.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.object.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.object.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <feature url="features/com.hundsun.ares.studio.service.feature_1.0.0.qualifier.jar" id="com.hundsun.ares.studio.service.feature" version="1.0.0.qualifier">
+      <category name="HUNDSUN JRES"/>
+   </feature>
+   <category-def name="HUNDSUN ARES Framework" label="HUNDSUN ARES Framework"/>
+   <category-def name="HUNDSUN JRES" label="HUNDSUN JRES"/>
+</site>

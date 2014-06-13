@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.hundsun.ares.studio.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="com.hundsun.ares.studio.Perspective"
+            id="com.hundsun.ares.studio.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         name="Ares Studio"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Ares Studio">
+         <property
+               name="startupForegroundColor"
+               value="b3b3b3">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="15,295,485,20">
+         </property>
+         <property
+               name="appName"
+               value="Ares Studio">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/ares16.png,icons/ares32.png">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,315,500,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/about.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%aboutText">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

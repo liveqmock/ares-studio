@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
+    nsURI="http://com.hundsun.ares.studio.model" nsPrefix="com.hundsun.ares.studio.model">
+  <eClassifiers xsi:type="ecore:EClass" name="EmfExtendAble" abstract="true" eSuperTypes="#//IExtendAbleModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="map">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IExtendAbleModel" instanceTypeName="IExtendAbleModel"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StringMapEntry" instanceClassName="java.util.Map$Entry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMapImprove" eSuperTypes="#//Map">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" upperBound="-1" eType="#//StringMapEntry"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IExtendFieldModel" instanceTypeName="IExtendFieldModel"
+      abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Map" instanceTypeName="Map" abstract="true"
+      interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendFieldModel" eSuperTypes="#//IExtendFieldModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendStrings" lowerBound="1"
+        eType="#//EMapImprove" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
