@@ -1,11 +1,10 @@
-### How to download
-ftp:aresstudio:at2re@192.168.51.31/ARES Studio4CRES_V1.0.exe
+### è¯•éªŒæ€§åˆ†æ”¯
 
 ### How to build
-cdµ½¸ùÄ¿Â¼,Ö´ĞĞ£º
+cdï¿½ï¿½ï¿½ï¿½Ä¿Â¼,Ö´ï¿½Ğ£ï¿½
 ```
 mvn clean install
 ```
 
-ÃüÁîÖ´ĞĞºó£¬updatesiteµÄzip°ü»áÉú³ÉÔÚbuild/com.hundsun.ares.studio.repository/target/Ä¿Â¼ÏÂ; Éú³ÉµÄ°²×°°üÔÚbuild/com.hundsun.ares.studio.product/target/productsÄ¿Â¼ÏÂ¡£
-_**³õ´Î¹¹½¨ÓÉÓÚÒªÏÂÔØºÜ¶àjar°ü£¬»á±È½ÏÂı¡£ ÁíÍâ£¬Èç¹û²»ĞèÒª´ò°²×°°ü£¬ÔÚpomÖĞÈ¥µôcom.hundsun.ares.studio.productÕâ¸ömoduleÒ²¿ÉÒÔ½ÚÊ¡Ê±¼ä**_
+ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğºï¿½ï¿½ï¿½updatesiteï¿½ï¿½zipï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½build/com.hundsun.ares.studio.repository/target/Ä¿Â¼ï¿½ï¿½; ï¿½ï¿½ï¿½ÉµÄ°ï¿½×°ï¿½ï¿½ï¿½ï¿½build/com.hundsun.ares.studio.product/target/productsÄ¿Â¼ï¿½Â¡ï¿½
+_**ï¿½ï¿½ï¿½Î¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ØºÜ¶ï¿½jarï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pomï¿½ï¿½È¥ï¿½ï¿½com.hundsun.ares.studio.productï¿½ï¿½ï¿½ï¿½moduleÒ²ï¿½ï¿½ï¿½Ô½ï¿½Ê¡Ê±ï¿½ï¿½**_
