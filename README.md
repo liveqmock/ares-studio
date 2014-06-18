@@ -1,4 +1,5 @@
-### 试验性分支
+### How to download
+ftp:aresstudio:at2re@192.168.51.31/ARES Studio4CRES_V1.0.exe
 
 ### How to build
 cd 到根目录
