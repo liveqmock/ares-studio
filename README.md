@@ -2,10 +2,11 @@
 ftp:aresstudio:at2re@192.168.51.31/ARES Studio4CRES_V1.0.exe
 
 ### How to build
-cdµ½¸ùÄ¿Â¼,Ö´ĞĞ£º
+cd åˆ°æ ¹ç›®å½•
+
 ```
 mvn clean install
 ```
 
-ÃüÁîÖ´ĞĞºó£¬updatesiteµÄzip°ü»áÉú³ÉÔÚbuild/com.hundsun.ares.studio.repository/target/Ä¿Â¼ÏÂ; Éú³ÉµÄ°²×°°üÔÚbuild/com.hundsun.ares.studio.product/target/productsÄ¿Â¼ÏÂ¡£
-_**³õ´Î¹¹½¨ÓÉÓÚÒªÏÂÔØºÜ¶àjar°ü£¬»á±È½ÏÂı¡£ ÁíÍâ£¬Èç¹û²»ĞèÒª´ò°²×°°ü£¬ÔÚpomÖĞÈ¥µôcom.hundsun.ares.studio.productÕâ¸ömoduleÒ²¿ÉÒÔ½ÚÊ¡Ê±¼ä**_
+å‘½ä»¤æ‰§è¡Œåï¼Œupdatesiteçš„zipåŒ…ä¼šç”Ÿæˆåœ¨build/com.hundsun.ares.studio.repository/target/ç›®å½•ä¸‹; ç”Ÿæˆçš„å®‰è£…åŒ…åœ¨build/com.hundsun.ares.studio.product/target/productsç›®å½•ä¸‹ã€‚
+_**åˆæ¬¡æ„å»ºç”±äºè¦ä¸‹è½½å¾ˆå¤šjaråŒ…ï¼Œä¼šæ¯”è¾ƒæ…¢ã€‚ å¦å¤–ï¼Œå¦‚æœä¸éœ€è¦æ‰“å®‰è£…åŒ…ï¼Œåœ¨pomä¸­å»æ‰com.hundsun.ares.studio.productè¿™ä¸ªmoduleä¹Ÿå¯ä»¥èŠ‚çœæ—¶é—´**_
